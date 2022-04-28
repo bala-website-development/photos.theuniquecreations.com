@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "delay": "300",
+        "title": "Contact Directly",
+        "icon": "icon_mail_alt",
+        "info": "<a href='mailto:demo@example.com'>demo@example.com</a><br /><a href='tel:0123456789'>0123456789</a>"
+    },
+    {
+        "id": 2,
+        "aos-delay": "600",
+        "title": "Visit our office",
+        "icon": "icon_pin_alt",
+        "info": "<p>192 Orchard Street, Ohio, California, 90002, Unite States</p>"
+    },
+    {
+        "id": 3,
+        "aos-delay": "900",
+        "title": "Contact Directly",
+        "icon": "icon_briefcase",
+        "info": "<p>Send your CV to our email: <a href='mailto:demo@demo.com'>demo@demo.com</a></p>"
+    }
+]
