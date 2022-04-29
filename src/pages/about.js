@@ -22,11 +22,12 @@ const AboutPage = () => {
           <div className="main-content">
             <PageTitleContainer />
             <AboutService />
-            <TeamContainer />
+            {/* <TeamContainer /> */}
+            <br />
             <Blockquote />
             <AboutGallery />
-            <AboutAward />
-            <BrandContainer />
+            {/* <AboutAward /> */}
+            {/* <BrandContainer /> */}
           </div>
           <Footer />
           <ScrollToTop />
