@@ -3,7 +3,7 @@ import Isotope from "isotope-layout";
 import { useEffect, useState } from "react";
 import { flatDeep } from "../utils";
 
-const useMasonry = (tucdata, PortfolioData, masonryListWrap, masonryGrid, btnWrap, btn) => {
+const useMasonry = (tucdata, masonryListWrap, masonryGrid, btnWrap, btn) => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
     const mixCategories1 = tucdata.map((item) => {
@@ -14,7 +14,7 @@ const useMasonry = (tucdata, PortfolioData, masonryListWrap, masonryGrid, btnWra
 
     setCategories(commonCategories);
 
-    //console.log("commonCategories", commonCategories);
+    //console.log("commonCategories", tucdata);
 
     // This for Images
     const masonryList = document.querySelector(masonryListWrap);
@@ -42,7 +42,7 @@ const useMasonry = (tucdata, PortfolioData, masonryListWrap, masonryGrid, btnWra
         });
       });
     });
-  }, [btn, btnWrap, masonryGrid, masonryListWrap, PortfolioData]);
+  }, [btn, btnWrap, masonryGrid, masonryListWrap, tucdata]);
   return { categories };
 };
 
