@@ -51,7 +51,7 @@ const Header = ({ classOption }) => {
             </div>
 
             <div className="col-auto">
-              <div className="d-none">
+              <div className="">
                 {" "}
                 <HeaderSearch onClick={onSearchHandler} />
               </div>

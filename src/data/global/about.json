@@ -2,12 +2,12 @@
   {
     "id": "about me",
     "title": "Say Hello From Bala!",
-    "excerpt": "We are a fairly small, flexible design studio that designs for print and web. <br>Alexis works flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing and a beautiful and functional website or whether you are looking for a great experience."
+    "excerpt": "Passion for photography and web design <br> Whether you need to create a brand from scratch, including marketing and a beautiful and functional website, photography or whether you are looking for a great experience."
   },
   {
     "id": "about service",
     "title": "Our Services",
-    "pagelinkText": ["Branding & Strategy", "Web Design & Development", "Packaging Design", "Video & Animation", "Marketing, SEO & Social Media"]
+    "pagelinkText": ["Kids Photography", "Maternity Photography", "Couple Photography", "Baby Shower Photography", "Birthday Party", "Anniversay Events/Parties", "Web Design & Development", "Product Photography", "Videography", "Marketing, SEO & Social Media"]
   },
   {
     "id": "team",
@@ -72,9 +72,9 @@
   },
   {
     "id": "blockquote",
-    "excerpt": "I’ve worked with many agencies throughout the world. <br />I’ve found Alexis to be one of those special agencies you wish all the others were like.",
-    "name": "Ellen Krelamine",
-    "designation": "CEO at Drfurion"
+    "excerpt": "Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever… It remembers little things, long after you have forgotten everything.",
+    "name": "Balakumar Velusamy",
+    "designation": "Founder"
   },
   {
     "id": "about gallery",
