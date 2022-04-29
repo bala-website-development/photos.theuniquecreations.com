@@ -26,9 +26,9 @@ const PortfolioContainer = () => {
       .then((response) => response.json())
       .then((data1) => {
         let length = data1.length;
-        let active1 = data1.filter((filter1) => filter1.viewingallery === 1);
+        let active1 = data1.filter((filter1) => filter1.isactive === 1 && filter1.viewingallery === 1);
         setGalleryImage(active1);
-        console.log("galleryimages", active1);
+        console.log("galleryimages", data1);
       })
       .catch((err) => {
         setNetworkError("Something went wrong, Please try again later!!");
@@ -40,9 +40,9 @@ const PortfolioContainer = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const { categories } = useMasonry(tucdata, PortfolioData, ".portfolio-list", ".masonry-grid", ".messonry-button", ".messonry-button button");
+  const { categories } = useMasonry(tucdata, ".portfolio-list", ".masonry-grid", ".messonry-button", ".messonry-button button");
   return (
-    <div className="portfolio-area portfolio-default-area position-relative">
+    <div className="portfolio-area portfolio-default-area ">
       <div className="container-fluid">
         <div className="row">
           <div className="col-12">
@@ -56,6 +56,7 @@ const PortfolioContainer = () => {
           {tucdata &&
             tucdata.map((portfolio) => (
               <div key={portfolio.gallery_id} className={`col masonry-grid mb-30 ${portfolio.title}`}>
+                {/*<div  key={portfolio.id}  className={`col masonry-grid mb-30 ${portfolio.categories.map((cat) => slugify(cat)).join(" ")}`} > */}
                 <PortfolioItem portfolio={portfolio} />
               </div>
             ))}
