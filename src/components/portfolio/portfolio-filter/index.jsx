@@ -6,7 +6,7 @@ const PortfolioFilter = ({ categories }) => {
   return (
     <div className="messonry-button text-center mb-50">
       <button data-filter="*" className="is-checked">
-        <span className="filter-text">featured</span>
+        <span className="filter-text">All</span>
       </button>
       {categories?.map((cat, idx) => (
         <button key={idx} data-filter={`.${slugify(cat)}`}>

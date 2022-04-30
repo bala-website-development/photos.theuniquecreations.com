@@ -47,7 +47,9 @@ const Header = ({ classOption }) => {
 
             <div className="col-auto">
               <div className="header-logo-area logotitle">
-                <h1 className="text-nowrap">{config.logotitle}</h1>
+                <h1 className="text-nowrap">
+                  <a href="/"> {config.logotitle}</a>
+                </h1>
                 {/* <Logo className="d-none" image={`${process.env.PUBLIC_URL}/img/logo.png`} /> */}
               </div>
             </div>

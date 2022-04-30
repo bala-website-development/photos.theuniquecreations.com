@@ -11,6 +11,7 @@ const PortfolioContainer = () => {
   const [networkError, setNetworkError] = useState("");
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const openLightbox = useCallback((event, { photo, index }) => {
     setCurrentImage(index);
@@ -22,17 +23,20 @@ const PortfolioContainer = () => {
     setViewerIsOpen(false);
   };
   const getGalleryDetails = async () => {
+    setLoading(true);
     await fetch(config.service_url + "getgallery")
       .then((response) => response.json())
       .then((data1) => {
         let length = data1.length;
         let active1 = data1.filter((filter1) => filter1.isactive === 1 && filter1.viewingallery === 1);
         setGalleryImage(active1);
+        setLoading(false);
         console.log("galleryimages", data1);
       })
       .catch((err) => {
         setNetworkError("Something went wrong, Please try again later!!");
         console.log("galleryimages", err);
+        setLoading(false);
       });
   };
   useEffect(() => {
@@ -55,7 +59,7 @@ const PortfolioContainer = () => {
           <div className="col resizer"></div>
           {tucdata &&
             tucdata.map((portfolio) => (
-              <div key={portfolio.gallery_id} className={`col masonry-grid mb-30 ${portfolio.title}`}>
+              <div key={portfolio.gallery_id} className={`col masonry-grid mb-40 ${portfolio.title}`}>
                 {/*<div  key={portfolio.id}  className={`col masonry-grid mb-30 ${portfolio.categories.map((cat) => slugify(cat)).join(" ")}`} > */}
                 <PortfolioItem portfolio={portfolio} />
               </div>

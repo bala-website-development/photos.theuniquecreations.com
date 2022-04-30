@@ -13,9 +13,10 @@ const Portfolio = () => {
     <React.Fragment>
       <Layout>
         <SEO title="Bala's Unique Creations || Photography" />
+        {/* <IntroContainer /> */}
         <div className="wrapper home-default-wrapper">
           <Header />
-          <IntroContainer />
+
           <div className="main-content">
             <QuteContainer />
             <PortfolioContainer />

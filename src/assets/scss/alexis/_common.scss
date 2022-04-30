@@ -859,11 +859,12 @@ iframe {
         }
     }
     .author-info {
+
         .name {
             color: $black;
             display: block;
-            font-size: 18px;
-            font-weight: $font-weight-bold;
+            font-size:5vw;
+            //font-weight: $font-weight-bold;
             font-style: normal;
             letter-spacing: -0.15px;
             line-height: 1;
