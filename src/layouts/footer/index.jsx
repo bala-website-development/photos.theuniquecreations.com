@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import FooterLogo from "../../components/footer-logo";
+import config from "../../config.json";
 
 const Footer = () => {
   return (
-    <footer className="footer-area reveal-footer border-top-style">
+    <footer className="footer-area reveal-footer border-top-style py-1">
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12">
@@ -26,13 +27,14 @@ const Footer = () => {
                 </div>
               </div>
               <div className="widget-item text-center">
-                <div className="about-widget">
-                  <FooterLogo image={`${process.env.PUBLIC_URL}/img/logo.png`} />
+                <div className="about-widget logotitle py-1">
+                  {/* <FooterLogo image={`${process.env.PUBLIC_URL}/img/logo.png`} /> */}
+                  <h1 className="text-nowrap">{config.logotitle}</h1>
                 </div>
                 <div className="widget-copyright">
                   <p>
-                    © 2021 <span>Bala</span>. Made with <i className="icofont-heart-alt"></i> by{" "}
-                    <a target="_blank" href="https://www.hasthemes.com" rel="noreferrer">
+                    © 2021 <span>Bala</span>. Developed by .
+                    <a target="_blank" href="https://www.theuniquecreations.com" rel="noreferrer">
                       Unique Creations
                     </a>
                   </p>

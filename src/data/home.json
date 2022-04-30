@@ -3,31 +3,15 @@
     "slider": [
       {
         "id": 1,
-        "backgroundImage": "/img/hero-slider/hero1.jpg",
-        "title": "Vouge Italia Deember Campaign",
-        "subTitle": "inspire 2026",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "buttonText": "Explore now"
-      },
-      {
-        "id": 2,
-        "backgroundImage": "/img/hero-slider/hero1.jpg",
-        "title": "Vouge Italia Deember Campaign",
-        "subTitle": "inspire 2026",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "buttonText": "Explore now"
-      },
-      {
-        "id": 3,
-        "backgroundImage": "/img/hero-slider/hero1.jpg",
-        "title": "Vouge Italia Deember Campaign",
-        "subTitle": "inspire 2026",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "buttonText": "Explore now"
+        "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/tucfbclouddb.appspot.com/o/photos.theuniquecreations.com%2Fbanner%2Fbanner.jpg?alt=media&token=373f3a98-1c4b-4014-b15d-955ce76c7b91",
+        "title": "",
+        "subTitle": "",
+        "desc": "",
+        "buttonText": ""
       }
     ]
   },
   {
-    "qute": "Bala's Unique Creations, Photography. <br /> Taking an image, freezing a moment, reveals how rich reality truly is."
+    "qute": "Taking an image, freezing a moment, reveals how rich reality truly is."
   }
 ]

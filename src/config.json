@@ -1,7 +1,7 @@
 {
   "domain": "photos.theuniquecreations.com",
   "storage": "photos.theuniquecreations.com",
-  "service_url": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/api/",
+  "service_url": "https://asia-south1-tuc-shopping-dev.cloudfunctions.net/tuc_shop_node_api/api/",
   "email_service_url": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/email/",
   "==========": "============",
   "service_url_dev": "https://asia-south1-tuc-shopping-dev.cloudfunctions.net/tuc_shop_node_api/api/",
@@ -24,6 +24,7 @@
     }
   ],
   "tucloginimage": "https://firebasestorage.googleapis.com/v0/b/tucfbclouddb.appspot.com/o/TUC%2Fslider%2Fslidetuc1.jpg?alt=media&token=ea1cb71c-2ff8-4365-95b3-e678d1306916",
+  "logotitle": "Bala's Photography",
   "aboutustitle": "",
   "aboutus1": "",
   "aboutus2": "",

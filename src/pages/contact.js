@@ -11,12 +11,12 @@ const Contact = () => {
   return (
     <React.Fragment>
       <Layout>
-        <SEO title="Bala's Unique Creations || Contact" />
+        <SEO title="Bala's Photography || Contact" />
         <div className="wrapper home-default-wrapper">
           <Header classOption="hb-border" />
           <div className="main-content">
             <ContactContainer />
-            <MapContainer />
+            {/* <MapContainer /> */}
           </div>
           <Footer />
           <ScrollToTop />
