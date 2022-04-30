@@ -4,26 +4,10 @@
       {
         "id": 1,
         "backgroundImage": "/img/hero-slider/hero1.jpg",
-        "title": "Vouge Italia Deember Campaign",
-        "subTitle": "inspire 2026",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "buttonText": "Explore now"
-      },
-      {
-        "id": 2,
-        "backgroundImage": "/img/hero-slider/hero1.jpg",
-        "title": "Vouge Italia Deember Campaign",
-        "subTitle": "inspire 2026",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "buttonText": "Explore now"
-      },
-      {
-        "id": 3,
-        "backgroundImage": "/img/hero-slider/hero1.jpg",
-        "title": "Vouge Italia Deember Campaign",
-        "subTitle": "inspire 2026",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "buttonText": "Explore now"
+        "title": "",
+        "subTitle": "",
+        "desc": "",
+        "buttonText": ""
       }
     ]
   },

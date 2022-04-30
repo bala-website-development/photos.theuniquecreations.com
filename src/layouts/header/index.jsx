@@ -4,6 +4,7 @@ import HamburgerMenu from "../../components/hamburger-menu";
 import HeaderSearch from "../../components/header-search";
 import Logo from "../../components/logo/index";
 import PopupSearch from "../../components/popup-search";
+import config from "../../config.json";
 
 const Header = ({ classOption }) => {
   const [ofcanvasShow, setOffcanvasShow] = useState(false);
@@ -45,8 +46,9 @@ const Header = ({ classOption }) => {
             </div>
 
             <div className="col-auto">
-              <div className="header-logo-area">
-                <Logo image={`${process.env.PUBLIC_URL}/img/logo.png`} />
+              <div className="header-logo-area logotitle">
+                <h1 className="text-nowrap">{config.logotitle}</h1>
+                {/* <Logo className="d-none" image={`${process.env.PUBLIC_URL}/img/logo.png`} /> */}
               </div>
             </div>
 

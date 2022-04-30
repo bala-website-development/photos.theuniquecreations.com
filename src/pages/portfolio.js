@@ -6,6 +6,7 @@ import PortfolioContainer from "../containers/global/portfolio/index.jsx";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
+import IntroContainer from "../containers/home/intro/index.jsx";
 
 const Portfolio = () => {
   return (
@@ -13,7 +14,8 @@ const Portfolio = () => {
       <Layout>
         <SEO title="Bala's Unique Creations || Photography" />
         <div className="wrapper home-default-wrapper">
-          <Header classOption="hb-border" />
+          <Header />
+          <IntroContainer />
           <div className="main-content">
             <QuteContainer />
             <PortfolioContainer />

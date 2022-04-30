@@ -3,9 +3,27 @@
   Header CSS
 -----------------------------------------------------------------------
 */
+@font-face {
 
+    font-family: "Bellamy Signature";
+    font-weight: normal;
+    font-style: "Regular";
+    src: url("../../fonts/Bellamy Signature.ttf") format("ttf"),
+   
+}
+
+
+.logotitle h1
+{
+font-family: "Bellamy Signature" !important;
+ font-size: 100px !important;
+ color: #865a00;
+ font-weight: normal;
+ 
+  
+}
 .header-area {
-    padding: 50px 0;
+    padding: 20px 0;
 
     @media #{$lg-device} {
         .container {
@@ -231,14 +249,25 @@
     // Header Default
     &.header-default {
         background-color: $white;
-        padding: 40px 0 35px;
+        padding: 10px 0 10px;
         position: relative;
         z-index: 999;
         @media #{$md-device} {
             padding: 20px 0 20px;
+            .logotitle h1 {
+              
+                font-size: 500px !important;
+            
+            
+            }
         }
         @media #{$sm-device} {
-            padding: 30px 0 20px;
+            padding: 10px 0 10px;
+            .logotitle h1 {
+                font-size: 50px !important;
+            
+            
+            }
         }
         .container-fluid {
             padding-left: 60px;

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import FooterLogo from "../../components/footer-logo";
+import config from "../../config.json";
 
 const Footer = () => {
   return (
@@ -26,8 +27,9 @@ const Footer = () => {
                 </div>
               </div>
               <div className="widget-item text-center">
-                <div className="about-widget">
-                  <FooterLogo image={`${process.env.PUBLIC_URL}/img/logo.png`} />
+                <div className="about-widget logotitle">
+                  {/* <FooterLogo image={`${process.env.PUBLIC_URL}/img/logo.png`} /> */}
+                  <h1 className="text-nowrap">{config.logotitle}</h1>
                 </div>
                 <div className="widget-copyright">
                   <p>
