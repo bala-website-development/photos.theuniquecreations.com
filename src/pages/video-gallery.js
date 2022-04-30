@@ -8,25 +8,22 @@ import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
 
 const VideoGallery = () => {
-    return (
-        <React.Fragment>
-            <Layout>
-                <SEO title="Alexis || Video Gallery" />
-                <div className="wrapper home-default-wrapper">
-                    <Header classOption="hb-border" />
-                    <div className="main-content">
-                        <PageTitleContainerTwo
-                            subTitle="Video Gallery"
-                            title="Write &amp; Share"
-                        />
-                        <VideoGalleryContainer />
-                    </div>
-                    <Footer />
-                    <ScrollToTop />
-                </div>
-            </Layout>
-        </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      <Layout>
+        <SEO title="Bala's Photography || Video Gallery" />
+        <div className="wrapper home-default-wrapper">
+          <Header classOption="hb-border" />
+          <div className="main-content">
+            <PageTitleContainerTwo subTitle="Video Gallery" title="Write &amp; Share" />
+            <VideoGalleryContainer />
+          </div>
+          <Footer />
+          <ScrollToTop />
+        </div>
+      </Layout>
+    </React.Fragment>
+  );
 };
 
 export default VideoGallery;
