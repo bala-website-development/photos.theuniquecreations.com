@@ -4186,7 +4186,8 @@ iframe {
 */
 .home-slider-area.slider-photographer .slider-content-area {
   text-align: center;
-  margin: 90px 0 21px;
+  font-family: 'Dancing Script' !important;
+  margin: 40px 0 21px;
 }
 @media only screen and (max-width: 991px) {
   .home-slider-area.slider-photographer .slider-content-area {
@@ -4201,7 +4202,7 @@ iframe {
 .home-slider-area.slider-photographer .slider-content-area h2 {
   font-size: 30px;
   line-height: 1.6;
-  font-family: "Libre Baskerville", serif;
+  font-family: 'Dancing Script', cursive !important;
   letter-spacing: -0.1px;
   margin-bottom: 0;
 }

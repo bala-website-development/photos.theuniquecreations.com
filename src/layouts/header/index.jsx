@@ -35,13 +35,20 @@ const Header = ({ classOption }) => {
         <div className="container-fluid">
           <div className="row align-items-center justify-content-between">
             <div className="col-auto">
-              <div className="header-action-area">
+              <div className="header-action-area w-100">
                 <button className="btn-menu" onClick={onCanvasHandler}>
                   <span></span>
                   <span></span>
                   <span></span>
                 </button>
-                <span className="menu-text">Menu</span>
+                <span className="menu-text">
+                  {" "}
+                  <a href="/about">about</a>
+                </span>
+                <span className="menu-text">
+                  {" "}
+                  <a href="/contact"> contact</a>
+                </span>
               </div>
             </div>
 
