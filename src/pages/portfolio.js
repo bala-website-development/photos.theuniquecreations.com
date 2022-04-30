@@ -22,7 +22,7 @@ const Portfolio = () => {
           <div className="main-content">
             <QuteContainer />
             <PortfolioContainer />
-            <Instagram />
+            {/* <Instagram /> */}
           </div>
           <Footer />
           <ScrollToTop />
