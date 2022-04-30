@@ -14,13 +14,13 @@ const Footer = () => {
                   <nav>
                     <ul>
                       <li>
-                        <Link to={process.env.PUBLIC_URL + "/"}>term &amp; condition</Link>
+                        <Link to={process.env.PUBLIC_URL + "/about"}>term &amp; condition</Link>
                       </li>
                       <li>
-                        <Link to={process.env.PUBLIC_URL + "/"}>policy</Link>
+                        <Link to={process.env.PUBLIC_URL + "/about"}>policy</Link>
                       </li>
                       <li>
-                        <Link to={process.env.PUBLIC_URL + "/"}>map</Link>
+                        <Link to={process.env.PUBLIC_URL + "/about"}>About</Link>
                       </li>
                     </ul>
                   </nav>
@@ -33,7 +33,7 @@ const Footer = () => {
                 </div>
                 <div className="widget-copyright">
                   <p>
-                    © 2021 <span>Bala</span>. Developed by .
+                    © {new Date().getFullYear()} <span>Bala</span>. Developed by .
                     <a target="_blank" href="https://www.theuniquecreations.com" rel="noreferrer">
                       Unique Creations
                     </a>
