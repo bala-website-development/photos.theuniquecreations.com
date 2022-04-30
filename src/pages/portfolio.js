@@ -21,6 +21,7 @@ const Portfolio = () => {
 
           <div className="main-content">
             <QuteContainer />
+
             <PortfolioContainer />
             {/* <Instagram /> */}
           </div>
