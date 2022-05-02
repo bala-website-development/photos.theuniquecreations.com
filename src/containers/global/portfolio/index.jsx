@@ -59,7 +59,7 @@ const PortfolioContainer = () => {
           <div className="col resizer"></div>
           {tucdata &&
             tucdata.map((portfolio) => (
-              <div key={portfolio.gallery_id} className={`col masonry-grid mb-30 ${portfolio.title}`}>
+              <div key={portfolio.gallery_id} className={`col masonry-grid mb-10 ${portfolio.title}`}>
                 {/*<div  key={portfolio.id}  className={`col masonry-grid mb-30 ${portfolio.categories.map((cat) => slugify(cat)).join(" ")}`} > */}
                 <PortfolioItem portfolio={portfolio} />
               </div>

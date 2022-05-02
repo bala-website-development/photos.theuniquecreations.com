@@ -585,7 +585,8 @@ progress {
     }
 }
 .row {
-    --bs-gutter-x: 1.5rem;
+    /* --bs-gutter-x: 1.5rem; */
+    --bs-gutter-x: 0.5rem;
     --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
@@ -765,7 +766,7 @@ progress {
 .gy-5 {
     --bs-gutter-y: 3rem;
 }
-@media (min-width: 576px) {
+@media (min-width: 276px) {
     .col-sm {
         flex: 1 0 0%;
     }
