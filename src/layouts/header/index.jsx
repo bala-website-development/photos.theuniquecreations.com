@@ -64,7 +64,30 @@ const Header = ({ classOption }) => {
             <div className="col-auto">
               <div className="">
                 {" "}
-                <HeaderSearch onClick={onSearchHandler} />
+                <div className="widget-item">
+                  <ul className="widget-social">
+                    {/* <li className="social-text">
+                      <span>follow us on social</span>
+                    </li>  */}
+                    {/* <li>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                      <i className="social_twitter"></i>
+                    </a>
+                  </li> */}
+                    {/* <li>
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                      <i className="social_facebook"></i>
+                    </a>
+                  </li> */}
+                    <li>
+                      <h5>
+                        <a href="https://www.instagram.com/theuniquecreations" target="_blank" rel="noopener noreferrer">
+                          <i className="social_instagram fa-lg"></i>
+                        </a>
+                      </h5>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
