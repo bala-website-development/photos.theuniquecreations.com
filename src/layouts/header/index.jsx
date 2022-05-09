@@ -80,9 +80,12 @@ const Header = ({ classOption }) => {
                     </a>
                   </li> */}
                     <li>
-                      <h5>
-                        <a href="https://www.instagram.com/theuniquecreations" target="_blank" rel="noopener noreferrer">
+                      <h5 className="p-1">
+                        <a href="https://www.instagram.com/theuniquecreations" className="px-1" target="_blank" rel="noopener noreferrer">
                           <i className="social_instagram fa-lg"></i>
+                        </a>
+                        <a href="https://pin.it/5TSyoeI" className="px-1" target="_blank" rel="noopener noreferrer">
+                          <i className="social_pinterest fa-lg"></i>
                         </a>
                       </h5>
                     </li>
