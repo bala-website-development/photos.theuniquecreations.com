@@ -47,6 +47,9 @@ body {
   -ms-word-wrap: break-word;
   word-wrap: break-word;
 }
+.social a {
+  font-size: 200px !important;
+}
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -155,6 +158,7 @@ table p {
   Common CSS
 -----------------------------------------------------------------------
 */
+
 .section-padding-bottom {
   padding-bottom: 100px;
 }

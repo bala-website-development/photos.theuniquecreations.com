@@ -27,7 +27,17 @@ const ContactContainer = () => {
               <div className="text-center" data-aos="fade-up">
                 <h2 className="title">Get In Touch/Feedback</h2>
               </div>
-              <ContactForm />
+              <div className="text-center" data-aos="fade-up">
+                <h2 className="title">
+                  {" "}
+                  <big>
+                    <a href="https://wa.me/919940380545" className="px-1 text-success" target="_blank" rel="noopener noreferrer">
+                      <i className="icofont-whatsapp fa-lg"></i>
+                    </a>
+                  </big>
+                </h2>
+              </div>
+              {/* <ContactForm /> */}
             </div>
           </div>
         </div>
