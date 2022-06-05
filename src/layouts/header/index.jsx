@@ -85,7 +85,7 @@ const Header = ({ classOption }) => {
                     </a>
                   </big>
 
-                  <big>
+                  <big className="d-none">
                     <a href="https://pin.it/5TSyoeI" className="px-1 text-danger" target="_blank" rel="noopener noreferrer">
                       <i className="social_pinterest fa-lg"></i>
                     </a>
