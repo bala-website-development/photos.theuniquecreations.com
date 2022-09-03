@@ -11,62 +11,14 @@
   },
   {
     "id": "team",
-    "title": "Meet Our Team",
+    "title": "Hello,",
     "team": [
       {
         "id": 1,
         "classOption": "team-member",
         "image": "./img/team/01.jpg",
-        "name": "Joe Biden",
-        "designation": "CEO Founder"
-      },
-      {
-        "id": 2,
-        "classOption": "team-member",
-        "image": "./img/team/02.jpg",
-        "name": "Alex Tuntuni",
-        "designation": "CEO Founder"
-      },
-      {
-        "id": 3,
-        "classOption": "team-member",
-        "image": "./img/team/03.jpg",
-        "name": "Blanche Fields",
-        "designation": "CEO Founder"
-      },
-      {
-        "id": 4,
-        "classOption": "team-member",
-        "image": "./img/team/04.jpg",
-        "name": "Alex Tuntuni",
-        "designation": "CEO Founder"
-      },
-      {
-        "id": 5,
-        "classOption": "team-member",
-        "image": "./img/team/05.jpg",
-        "name": "Blanche Fields",
-        "designation": "CEO Founder"
-      },
-      {
-        "id": 6,
-        "classOption": "team-member",
-        "image": "./img/team/06.jpg",
-        "name": "Alex Tuntuni",
-        "designation": "CEO Founder"
-      },
-      {
-        "id": 7,
-        "classOption": "team-member",
-        "image": "./img/team/07.jpg",
-        "name": "Blanche Fields",
-        "designation": "CEO Founder"
-      },
-      {
-        "id": 8,
-        "classOption": "team-member become-member",
-        "image": "./img/team/01.jpg",
-        "name": "Become <br>member in <br>Alexis"
+        "name": "Balakumar Velusamy",
+        "designation": "Founder"
       }
     ]
   },
