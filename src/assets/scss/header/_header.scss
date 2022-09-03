@@ -24,6 +24,9 @@ font-size:6vw !important;
     min-height: 700px;
 }
 .header-area {
+    a{
+        color: #666666 !important;
+    }
     padding: 20px 0;
 
     @media #{$lg-device} {
@@ -69,8 +72,8 @@ font-size:6vw !important;
                 & > li {
                     &:hover {
                         & > a {
-                            background-color: $black-111;
-                            color: $white;
+                         color: $black-111;
+                           // color: $white;
                             &:after {
                                 opacity: 1;
                             }
@@ -80,7 +83,7 @@ font-size:6vw !important;
                     & > a {
                         color: $white;
                         &:after {
-                            background-color: $black-111;
+                           color: $black-111;
                             content: "";
                             height: 100%;
                             opacity: 0;
@@ -108,7 +111,7 @@ font-size:6vw !important;
                 a {
                     color: $white;
                     &:hover {
-                        background-color: $black-111;
+                      color: $black-111;
                     }
 
                     &.btn-cart {
