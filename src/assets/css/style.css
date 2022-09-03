@@ -3392,10 +3392,10 @@ iframe {
   opacity: 1;
 }
 .header-area.sticky-header.sticky .main-menu > li > a:before {
-  color: #fff;
+  color: #666666;
 }
 .header-area.sticky-header.sticky .header-action-area button, .header-area.sticky-header.sticky .header-action-area a {
-  color: #fff;
+  color: #666666 !important;
 }
 .header-area.sticky-header.sticky .header-action-area button:hover, .header-area.sticky-header.sticky .header-action-area a:hover {
   background-color: #111;
