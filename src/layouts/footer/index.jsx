@@ -13,11 +13,11 @@ const Footer = () => {
                 <div className="widget-footer-nav">
                   <nav>
                     <ul>
-                      <li>
+                      {/* <li>
                         <Link to={process.env.PUBLIC_URL + "/about"}>term &amp; condition</Link>
-                      </li>
+                      </li> */}
                       <li>
-                        <Link to={process.env.PUBLIC_URL + "/about"}>policy</Link>
+                        <Link to={process.env.PUBLIC_URL + "/"}>Home</Link>
                       </li>
                       <li>
                         <Link to={process.env.PUBLIC_URL + "/about"}>About</Link>

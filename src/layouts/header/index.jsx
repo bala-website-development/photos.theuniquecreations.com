@@ -43,6 +43,10 @@ const Header = ({ classOption }) => {
                 </button>
                 <span className="menu-text">
                   {" "}
+                  <a href="/">Home</a>
+                </span>
+                <span className="menu-text">
+                  {" "}
                   <a href="/about">about</a>
                 </span>
                 <span className="menu-text">
