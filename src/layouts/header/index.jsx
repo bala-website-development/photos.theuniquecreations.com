@@ -84,7 +84,7 @@ const Header = ({ classOption }) => {
                   </li> */}
 
                   <big>
-                    <a href="https://www.instagram.com/theuniquecreations" className="px-1 text-dark " target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/balakumar.velusamy" className="px-1 text-dark " target="_blank" rel="noopener noreferrer">
                       <i className="social_instagram fa-lg"></i>
                     </a>
                   </big>

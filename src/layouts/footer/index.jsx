@@ -56,7 +56,7 @@ const Footer = () => {
                     </a>
                   </li> */}
                   <li>
-                    <a href="https://www.instagram.com/theuniquecreations" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/balakumar.velusamy" target="_blank" rel="noopener noreferrer">
                       <i className="social_instagram"></i>
                     </a>
                   </li>

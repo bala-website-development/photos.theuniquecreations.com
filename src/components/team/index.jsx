@@ -22,7 +22,7 @@ const Team = ({ data }) => {
                     >
                         <i className="social_twitter"></i>
                     </a> */}
-          <a href="https://instagram.com/theuniquecreations" target="_blank" rel="noopener noreferrer">
+          <a href="https://instagram.com/balakumar.velusamy" target="_blank" rel="noopener noreferrer">
             <i className="social_instagram"></i>
           </a>
           {/* <a
