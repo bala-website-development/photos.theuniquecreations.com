@@ -7,17 +7,17 @@ const AboutGallery = () => {
         <div className="row">
           <div className="col-sm-6 col-md-6 col-lg-6" data-aos="fade-up">
             <div className="thumb mb-30">
-              <img className="w-100" src={`${process.env.PUBLIC_URL}/${AboutData[4].gallery.imageOne}`} alt="bala photography" />
+              <img className="w-100" src={`${process.env.PUBLIC_URL}/${AboutData[4].gallery.imageOne}`} alt="SSN photography" />
             </div>
           </div>
           <div className="col-sm-6 col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div className="thumb mb-30">
-              <img className="w-100" src={`${process.env.PUBLIC_URL}/${AboutData[4].gallery.imageTwo}`} alt="bala photography" />
+              <img className="w-100" src={`${process.env.PUBLIC_URL}/${AboutData[4].gallery.imageTwo}`} alt="SSN photography" />
             </div>
           </div>
           <div className="col-lg-12" data-aos="fade-up" data-aos-delay="600">
             <div className="thumb">
-              <img className="w-100" src={`${process.env.PUBLIC_URL}/${AboutData[4].gallery.imageThree}`} alt="bala photography" />
+              <img className="w-100" src={`${process.env.PUBLIC_URL}/${AboutData[4].gallery.imageThree}`} alt="SSN photography" />
             </div>
           </div>
         </div>

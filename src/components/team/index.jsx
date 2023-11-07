@@ -5,8 +5,9 @@ const Team = ({ data }) => {
   return (
     <div className={data.classOption}>
       <div className="thumb">
-        <img src={data.image} alt="Alexis-Team" />
+        <img src={data.image} alt="ssn digital media" />
       </div>
+
       <div className="content">
         <div className="member-info">
           <h3 className="name">

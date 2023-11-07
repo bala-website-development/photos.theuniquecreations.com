@@ -11,7 +11,7 @@ const Blog = () => {
   return (
     <React.Fragment>
       <Layout>
-        <SEO title="Bala's Photography || Blog" />
+        <SEO title="SSN Digital Media Photography || Blog" />
         <div className="wrapper home-default-wrapper">
           <Header classOption="hb-border" />
           <div className="main-content">

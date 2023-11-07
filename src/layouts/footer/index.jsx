@@ -33,7 +33,7 @@ const Footer = () => {
                 </div>
                 <div className="widget-copyright">
                   <p>
-                    © {new Date().getFullYear()} <span>Bala</span>. Developed by .
+                    © {new Date().getFullYear()} <span></span>. Developed by .
                     <a target="_blank" href="https://ssndigitalmedia.com" rel="noreferrer">
                       SSN Digital Media
                     </a>

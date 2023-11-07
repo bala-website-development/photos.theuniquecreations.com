@@ -14,7 +14,7 @@ const Portfolio = () => {
   return (
     <React.Fragment>
       <Layout>
-        <SEO title="Bala's Photography" />
+        <SEO title="SSN Digital Media Photography" />
         {/* <IntroContainer /> */}
         <div className="wrapper home-default-wrapper">
           <Header />

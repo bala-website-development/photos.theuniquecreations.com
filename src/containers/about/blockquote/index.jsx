@@ -13,7 +13,7 @@ const Blockquote = () => {
                 }}
               />
               <div className="author-info logotitle">
-                <h1 className="name logotitle">{AboutData[3].name}</h1>
+                <h1 className="name logotitle red">{AboutData[3].name}</h1>
                 <span className="job">{AboutData[3].designation}</span>
               </div>
             </blockquote>
