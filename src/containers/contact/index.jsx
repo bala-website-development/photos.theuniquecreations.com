@@ -13,7 +13,7 @@ const ContactContainer = () => {
         </div>
         <div className="row">
           <div className="col-lg-12 col-xl-10 m-auto">
-            <div className="contact-info-content">
+            <div className="contact-info-content d-none ">
               {ContactData &&
                 ContactData.map((single, key) => {
                   return <ContactInfo data={single} key={key} />;
@@ -25,16 +25,31 @@ const ContactContainer = () => {
           <div className="col-lg-12 col-xl-10 m-auto">
             <div className="contact-form">
               <div className="text-center" data-aos="fade-up">
-                <h2 className="title">Get In Touch/Feedback</h2>
+                <h2 className="title">Contact us at below</h2>
               </div>
               <div className="text-center" data-aos="fade-up">
                 <h2 className="title">
                   {" "}
                   <big>
-                    <a href="https://wa.me/919940380545" className="px-1 text-success" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/18126108654" className="px-1 text-success" target="_blank" rel="noopener noreferrer">
                       <i className="icofont-whatsapp fa-lg"></i>
                     </a>
+                  </big>{" "}
+                  <big>
+                    <a href="https://www.instagram.com/ssndigitalmedia" className="px-1 text-success" target="_blank" rel="noopener noreferrer">
+                      <i className="icofont-instagram fa-lg"></i>
+                    </a>
+                  </big>{" "}
+                  <big>
+                    <a href="mailto:ssndigitalmediaservices@gmail.com" className="px-1 text-alert" target="_blank" rel="noopener noreferrer">
+                      <i className="icofont-mail fa-lg"></i>
+                    </a>
                   </big>
+                  <br /> <br />
+                  Contact :
+                  <a href="mailto:ssndigitalmediaservices@gmail.com" className="px-1 text-alert" target="_blank" rel="noopener noreferrer">
+                    ssndigitalmediaservices@gmail.com
+                  </a>
                 </h2>
               </div>
               {/* <ContactForm /> */}
