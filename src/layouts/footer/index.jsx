@@ -34,7 +34,7 @@ const Footer = () => {
                 <div className="widget-copyright">
                   <p>
                     © {new Date().getFullYear()} <span></span>. Developed by .
-                    <a target="_blank" href="https://ssndigitalmedia.com" rel="noreferrer">
+                    <a target="_blank" href="#" rel="noreferrer">
                       SSN Digital Media
                     </a>
                   </p>
@@ -56,7 +56,7 @@ const Footer = () => {
                     </a>
                   </li> */}
                   <li>
-                    <a href="https://www.instagram.com/balakumar.velusamy" target="_blank" rel="noopener noreferrer">
+                    <a target="_blank" href="https://www.instagram.com/ssndigitalmedia" rel="noreferrer">
                       <i className="social_instagram"></i>
                     </a>
                   </li>
