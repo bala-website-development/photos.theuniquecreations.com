@@ -4193,6 +4193,12 @@ iframe {
   font-family: 'Dancing Script' !important;
   margin: 40px 0 21px;
 }
+.slider-content-area1 {
+  text-align: center;
+  font-family: 'Dancing Script' !important;
+  font-size: medium !important;
+  margin: 40px 0 21px;
+}
 @media only screen and (max-width: 991px) {
   .home-slider-area.slider-photographer .slider-content-area {
     margin: 70px 0 0;
