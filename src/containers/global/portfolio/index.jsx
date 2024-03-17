@@ -41,7 +41,7 @@ const PortfolioContainer = () => {
   };
   useEffect(() => {
     getGalleryDetails();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
   }, []);
 
   const { categories } = useMasonry(tucdata, ".portfolio-list", ".masonry-grid", ".messonry-button", ".messonry-button button");
