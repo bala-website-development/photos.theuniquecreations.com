@@ -19,15 +19,21 @@ const ContactContainer = () => {
                   return <ContactInfo data={single} key={key} />;
                 })}
             </div>
+            <div></div>
           </div>
         </div>
         <div className="row">
           <div className="col-lg-12 col-xl-10 m-auto">
             <div className="contact-form">
               <div className="text-center" data-aos="fade-up">
-                <h2 className="title">Contact us at below</h2>
+                <ContactForm />
+              </div>
+              <div className="text-center d-none" data-aos="fade-up ">
+                <h2 className="title">Contact us at below social links</h2>
               </div>
               <div className="text-center" data-aos="fade-up">
+                <br />
+                <br />
                 <h2 className="title">
                   {" "}
                   <big>
@@ -52,7 +58,6 @@ const ContactContainer = () => {
                   </a>
                 </h2>
               </div>
-              {/* <ContactForm /> */}
             </div>
           </div>
         </div>

@@ -1,5 +1,7 @@
 {
   "domain": "photos.theuniquecreations.com",
+  "website": "www.ssndigitalmedia.com",
+  "websitetitle": "SSN Digital Media | www.ssndigitalmedia.com",
   "storage": "photos.theuniquecreations.com",
   "service_url": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/api/",
   "email_service_url": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/email/",
@@ -40,7 +42,7 @@
   "contact_email": "",
   "contact_name": "",
   "fromemail": "SSN Digital Media<ssndigitalmediaservices@gmail.com>",
-  "subject": "Photos SSN Digital Media - Contact Us - ",
+  "subject": "SSN Digital Media - Contact Us - ",
   "instagram_access_token": "IGQVJYMXNxblVySjJqWWMxV2FUb01JU2N6Y0VZAdE9HSUtWUEVPd3V6eWJHUm9uVGZAzNFB3Qy1iNm9KMEZA1d000RzZACME5CN2w4R3VwYjhOMHFaU3RHNExKRy16bDQ4RGdXV0d0c3ByNFpIU2lOMC1faAZDZD",
   "instagram_feedcount": "12"
 }
