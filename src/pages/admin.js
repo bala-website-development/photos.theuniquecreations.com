@@ -1,7 +1,7 @@
 import React from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
-import ContactContainer from "../containers/contact";
+import AdminContainer from "../containers/admin";
 import MapContainer from "../containers/global/map";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
@@ -15,7 +15,7 @@ const Admin = () => {
         <div className="wrapper home-default-wrapper">
           <Header classOption="hb-border" />
           <div className="main-content">
-            <ContactContainer />
+            <AdminContainer />
           </div>
           <Footer />
           <ScrollToTop />
