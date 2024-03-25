@@ -51,6 +51,10 @@ const Header = ({ classOption }) => {
                 </span>
                 <span className="menu-text">
                   {" "}
+                  <a href="/video-gallery">Video Gallery</a>
+                </span>
+                <span className="menu-text">
+                  {" "}
                   <a href="/contact"> contact</a>
                 </span>
               </div>

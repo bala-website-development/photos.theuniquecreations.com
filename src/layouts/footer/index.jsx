@@ -22,6 +22,9 @@ const Footer = () => {
                       <li>
                         <Link to={process.env.PUBLIC_URL + "/about"}>About</Link>
                       </li>
+                      <li>
+                        <Link to={process.env.PUBLIC_URL + "/video-gallery"}>Video Gallery</Link>
+                      </li>
                     </ul>
                   </nav>
                 </div>

@@ -1,22 +1,21 @@
 import React from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
-import PageTitleContainerTwo from "../containers/global/page-title-two";
-import VideoGalleryContainer from "../containers/video-gallery";
+import ContactContainer from "../containers/contact";
+import MapContainer from "../containers/global/map";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
 
-const VideoGallery = () => {
+const Admin = () => {
   return (
     <React.Fragment>
       <Layout>
-        <SEO title="SSN Digital Media Photography || Video Gallery" />
+        <SEO title="SSN Digital Media | Admin" />
         <div className="wrapper home-default-wrapper">
           <Header classOption="hb-border" />
           <div className="main-content">
-            <PageTitleContainerTwo subTitle="Video Gallery" title="Channel Videos" />
-            <VideoGalleryContainer />
+            <ContactContainer />
           </div>
           <Footer />
           <ScrollToTop />
@@ -26,4 +25,4 @@ const VideoGallery = () => {
   );
 };
 
-export default VideoGallery;
+export default Admin;
