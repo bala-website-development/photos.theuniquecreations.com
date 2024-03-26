@@ -5,6 +5,8 @@
   "storage": "photos.theuniquecreations.com",
   "service_url": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/api/",
   "email_service_url": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/email/",
+  "youtubeservice": "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCfUC_AWRyXNvCuNnz6qagramukV4eZku84du9o&channelId=UCkSjRr7Q3YHsIhvwZ66yxQA&part=snippet,id&order=date&maxResults=20",
+  "youtubeservice1": "replace ramuk",
   "==========": "============",
   "service_url_dev": "https://asia-south1-tuc-shopping-dev.cloudfunctions.net/tuc_shop_node_api/api/",
   "service_url_local": "http://localhost:8000/api/",

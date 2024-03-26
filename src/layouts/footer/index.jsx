@@ -22,6 +22,9 @@ const Footer = () => {
                       <li>
                         <Link to={process.env.PUBLIC_URL + "/about"}>About</Link>
                       </li>
+                      <li>
+                        <Link to={process.env.PUBLIC_URL + "/video-gallery"}>Video Gallery</Link>
+                      </li>
                     </ul>
                   </nav>
                 </div>
@@ -33,9 +36,9 @@ const Footer = () => {
                 </div>
                 <div className="widget-copyright">
                   <p>
-                    © {new Date().getFullYear()} <span></span>. Developed by .
+                    © {new Date().getFullYear()} <span></span> |{" "}
                     <a target="_blank" href="#" rel="noreferrer">
-                      SSN Digital Media
+                      SSN Digital Media LLC
                     </a>
                   </p>
                 </div>

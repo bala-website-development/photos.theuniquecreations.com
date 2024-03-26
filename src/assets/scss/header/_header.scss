@@ -14,9 +14,9 @@
 
 .logotitle h1
 {
-font-family: "Bellamy Signature" !important;
-font-size:6vw !important;
- color: #865a00;
+font-family: "Dancing Script" !important;
+font-size:auto !important;
+ color: #865a00 !important;
  font-weight: normal;
 }
 .min-height-700
@@ -25,7 +25,7 @@ font-size:6vw !important;
 }
 .header-area {
     a{
-        color: #666666 !important;
+        color: #865a00 !important;
     }
     padding: 20px 0;
 
@@ -38,10 +38,12 @@ font-size:6vw !important;
 
     @media #{$md-device} {
         padding: 53px 0;
+       
     }
 
     @media #{$sm-device} {
         padding: 25px 0;
+       
     }
 
     // Sticky Header
@@ -260,7 +262,7 @@ font-size:6vw !important;
             padding: 20px 0 20px;
             .logotitle h1 {
               
-                font-size: 60px !important;
+               // font-size: 60px !important;
             
             
             }
@@ -268,7 +270,7 @@ font-size:6vw !important;
         @media #{$sm-device} {
             padding: 10px 0 10px;
             .logotitle h1 {
-                font-size: 60px !important;
+               // font-size: 60px !important;
             }
         }
         .container-fluid {

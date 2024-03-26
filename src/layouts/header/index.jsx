@@ -1,77 +1,56 @@
-import PropTypes from "prop-types";
-import { Fragment, useEffect, useState } from "react";
-import HamburgerMenu from "../../components/hamburger-menu";
-import HeaderSearch from "../../components/header-search";
-import Logo from "../../components/logo/index";
-import PopupSearch from "../../components/popup-search";
+import { Link } from "react-router-dom";
+import FooterLogo from "../../components/footer-logo";
 import config from "../../config.json";
 
-const Header = ({ classOption }) => {
-  const [ofcanvasShow, setOffcanvasShow] = useState(false);
-  const onCanvasHandler = () => {
-    setOffcanvasShow((prev) => !prev);
-  };
-  const [searchbarShow, setSearchbarShow] = useState(false);
-  const onSearchHandler = () => {
-    setSearchbarShow((prev) => !prev);
-  };
-  const [scroll, setScroll] = useState(0);
-  const [headerTop, setHeaderTop] = useState(0);
-  useEffect(() => {
-    const header = document.querySelector(".header-area");
-    setHeaderTop(header.offsetTop);
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const handleScroll = ({}) => {
-    setScroll(window.scrollY);
-  };
+const Footer = () => {
   return (
-    <Fragment>
-      <header className={`header-area header-default sticky-header ${classOption} ${scroll > headerTop ? "sticky" : ""}`}>
-        <div className="container-fluid">
-          <div className="row align-items-center justify-content-between">
-            <div className="col-auto">
-              <div className="header-action-area w-100">
-                <button className="btn-menu" onClick={onCanvasHandler}>
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </button>
-                <span className="menu-text">
-                  {" "}
-                  <a href="/">Home</a>
-                </span>
-                <span className="menu-text">
-                  {" "}
-                  <a href="/about">about</a>
-                </span>
-                <span className="menu-text">
-                  {" "}
-                  <a href="/contact"> contact</a>
-                </span>
+    <footer className="footer-area reveal-footer  py-2">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-sm-12">
+            <div className="footer-content justify-content-between">
+              <div className="widget-item text-center">
+                <div className="about-widget logotitle py-1 pt-1">
+                  {/* <FooterLogo image={`${process.env.PUBLIC_URL}/img/logo.png`} /> */}
+                  <h1 className="text-nowrap px-3">{config.logotitle}</h1>
+                </div>
+                <div className="widget-copyright d-none">
+                  <p>
+                    © {new Date().getFullYear()} <span></span> |{" "}
+                    <a target="_blank" href="#" rel="noreferrer">
+                      SSN Digital Media LLC
+                    </a>
+                  </p>
+                </div>
+              </div>{" "}
+              <div className="widget-item text-center">
+                <div className="widget-footer-nav pt-3">
+                  <nav>
+                    <ul>
+                      {/* <li>
+                        <Link to={process.env.PUBLIC_URL + "/about"}>term &amp; condition</Link>
+                      </li> */}
+                      <li>
+                        <Link to={process.env.PUBLIC_URL + "/"}>Home</Link>
+                      </li>
+                      <li>
+                        <Link to={process.env.PUBLIC_URL + "/about"}>About</Link>
+                      </li>
+                      <li>
+                        <Link to={process.env.PUBLIC_URL + "/video-gallery"}>Video Gallery</Link>
+                      </li>
+                      <li>
+                        <Link to={process.env.PUBLIC_URL + "/contact"}>Contact</Link>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
               </div>
-            </div>
-
-            <div className="col-auto">
-              <div className="header-logo-area logotitle">
-                <h1 className="text-nowrap">
-                  <a href="/">{config.logotitle}</a>
-                </h1>
-                {/* <Logo className="d-none" image={`${process.env.PUBLIC_URL}/img/logo.png`} /> */}
-              </div>
-            </div>
-
-            <div className="col-auto">
-              <div className="">
-                {" "}
-                <div className="social">
-                  {/* <li className="social-text">
-                      <span>follow us on social</span>
-                    </li>  */}
+              <div className="widget-item d-none">
+                <ul className="widget-social ">
+                  <li className="social-text">
+                    <span>follow us on social</span>
+                  </li>
                   {/* <li>
                     <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
                       <i className="social_twitter"></i>
@@ -82,36 +61,19 @@ const Header = ({ classOption }) => {
                       <i className="social_facebook"></i>
                     </a>
                   </li> */}
-
-                  <big>
-                    <a href="https://www.instagram.com/ssndigitalmedia" className="px-1 text-dark " target="_blank" rel="noopener noreferrer">
-                      <i className="social_instagram fa-lg"></i>
+                  <li>
+                    <a target="_blank" href="https://www.instagram.com/ssndigitalmedia" rel="noreferrer">
+                      <i className="social_instagram"></i>
                     </a>
-                  </big>
-
-                  <big className="d-none">
-                    <a href="https://pin.it/5TSyoeI" className="px-1 text-danger" target="_blank" rel="noopener noreferrer">
-                      <i className="social_pinterest fa-lg"></i>
-                    </a>
-                  </big>
-                </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </header>
-      <PopupSearch show={searchbarShow} onClose={onSearchHandler} />
-      <HamburgerMenu show={ofcanvasShow} onClose={onCanvasHandler} />
-    </Fragment>
+      </div>
+    </footer>
   );
 };
 
-Header.propTypes = {
-  classOption: PropTypes.string,
-};
-
-Header.defaultProps = {
-  classOption: "header-area header-default sticky-header",
-};
-
-export default Header;
+export default Footer;

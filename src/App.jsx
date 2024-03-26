@@ -16,6 +16,7 @@ import NavScrollTop from "./components/nav-scroll-top";
 import AboutPage from "./pages/about";
 import Blog from "./pages/blog";
 import Contact from "./pages/contact";
+import Admin from "./pages/admin";
 import HomePage from "./pages/index";
 import Portfolio from "./pages/portfolio";
 import VideoGallery from "./pages/video-gallery";
@@ -42,15 +43,16 @@ const App = () => {
         <Switch>
           <Route path={`${process.env.PUBLIC_URL + "/"}`} exact component={Portfolio} />
           <Route path={`${process.env.PUBLIC_URL + "/about"}`} component={AboutPage} />
+           <Route path={`${process.env.PUBLIC_URL + "/admin"}`} component={Admin} />
           <Route path={`${process.env.PUBLIC_URL + "/portfolio"}`} component={Portfolio} />
           <Route path={`${process.env.PUBLIC_URL + "/video-gallery"}`} component={VideoGallery} />
-          <Route path={`${process.env.PUBLIC_URL + "/portfolio-details/:id"}`} component={PortfolioDetails} />
-          <Route path={`${process.env.PUBLIC_URL + "/blog"}`} component={Blog} />
+          {/* <Route path={`${process.env.PUBLIC_URL + "/portfolio-details/:id"}`} component={PortfolioDetails} /> */}
+          {/* <Route path={`${process.env.PUBLIC_URL + "/blog"}`} component={Blog} />
           <Route path={`${process.env.PUBLIC_URL + "/category/:slug"}`} component={BlogCategory} />
           <Route path={`${process.env.PUBLIC_URL + "/tag/:slug"}`} component={BlogTag} />
           <Route path={`${process.env.PUBLIC_URL + "/date/:date"}`} component={BlogDate} />
           <Route path={`${process.env.PUBLIC_URL + "/author/:author"}`} component={BlogAuthor} />
-          <Route path={`${process.env.PUBLIC_URL + "/blog-details/:id"}`} component={BlogDetails} />
+          <Route path={`${process.env.PUBLIC_URL + "/blog-details/:id"}`} component={BlogDetails} /> */}
           <Route path={`${process.env.PUBLIC_URL + "/contact"}`} component={Contact} />
         </Switch>
       </NavScrollTop>
