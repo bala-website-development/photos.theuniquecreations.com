@@ -3,7 +3,7 @@ import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
 import Instagram from "../components/instagramfeed";
 import QuteContainer from "../containers/global/global-qute/index.jsx";
-import PortfolioContainer from "../containers/global/portfolionew/index.jsx";
+import PortfolioContainer from "../containers/global/portfolio/index.jsx";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";

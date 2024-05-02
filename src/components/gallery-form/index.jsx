@@ -256,9 +256,9 @@ const ContactForm = () => {
           <div className="col-md-12" data-aos="fade-up">
             <div className="form-group mb-0"></div>
           </div>
-          <div className="p-1 mt-1  ">{successMsg}</div>
-          <div className="p-1 mt-1  ">{message}</div>
-          <div className="p-1 mt-1  ">{progress}</div>
+          <div className="p-1 mt-1">{successMsg}</div>
+          <div className="p-1 mt-1">{message}</div>
+          <div className="p-1 mt-1">{progress}</div>
           <div className="col-md-12 text-center" data-aos="fade-up" data-aos-delay="300">
             <div className="form-group mb-0">
               <button className="btn-submit" type="submit">
