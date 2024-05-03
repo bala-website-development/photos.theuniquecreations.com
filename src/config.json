@@ -2,7 +2,7 @@
   "domain": "ssndigitalmedia.com",
   "website": "www.ssndigitalmedia.com",
   "websitetitle": "SSN Digital Media | www.ssndigitalmedia.com",
-  "storage": "photos.theuniquecreations.com",
+  "storage_old": "photos.theuniquecreations.com",
 
   "==========": "============",
   "service_url_old": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/api/",
