@@ -3,4 +3,4 @@ Allow: /about
 Allow: /
 Allow: /contact
 Allow: /video-gallery
-Sitemap: https://www.sivalaassociates.in/sitemap.txt
+Sitemap: https://www.ssndigitalmedia.com/sitemap.txt
