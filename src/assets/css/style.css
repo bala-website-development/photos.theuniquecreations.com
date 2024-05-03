@@ -4201,12 +4201,12 @@ iframe {
 }
 @media only screen and (max-width: 991px) {
   .home-slider-area.slider-photographer .slider-content-area {
-    margin: 70px 0 0;
+    margin: 10px 0 0 !important;
   }
 }
 @media only screen and (max-width: 767px) {
   .home-slider-area.slider-photographer .slider-content-area {
-    margin: 55px 0 0;
+    margin: 5px 0 0 !important;
   }
 }
 .home-slider-area.slider-photographer .slider-content-area h2 {
