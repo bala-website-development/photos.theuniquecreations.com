@@ -32,28 +32,28 @@ const PortfolioContainer = () => {
         let active1 = data1.filter((filter1) => filter1.isactive === 1 && filter1.viewingallery === 1);
         setGalleryImage(active1);
         setLoading(false);
-        console.log("galleryimages", data1);
+        //console.log("galleryimages", data1);
       })
       .catch((err) => {
         setNetworkError("Something went wrong, Please try again later!!");
-        console.log("galleryimages", err);
+        //console.log("galleryimages", err);
         setLoading(false);
       });
   };
   useEffect(() => {
     const fetchData = async () => {
-      console.log("ssnbloginisdefetch");
+      //console.log("ssnbloginisdefetch");
       const value = "home";
       const response = await axios.get(config.aws_service_url + "itemsbytype/" + value);
       const sorteddata = response?.data.sort((b, a) => a.date?.localeCompare(b.date));
       let active1 = sorteddata.filter((filter1) => filter1.isactive === 1);
       setGalleryImage(active1);
-      console.log("ssnbloginisdefetch value", active1);
+      //console.log("ssnbloginisdefetch value", active1);
     };
     try {
       fetchData();
     } catch (ex) {
-      console.log("error", ex);
+      //console.log("error", ex);
     }
   }, []);
 

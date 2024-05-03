@@ -44,13 +44,13 @@ const ContactForm = () => {
       website: config.domain,
     };
 
-    console.log(datas);
+    //console.log(datas);
     try {
       getsecrets();
-      console.log("sec", secret);
+      //console.log("sec", secret);
       uploadFile(datas, "home", secret, e);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       // alert("There is an error", err);
     }
   };
@@ -69,15 +69,15 @@ const ContactForm = () => {
         return data;
       })
       .catch((err) => {
-        console.log("response", err);
+        //console.log("response", err);
       });
   };
 
   const uploadFile = async (datas, type, secret, e) => {
     // S3 Bucket Name
-    console.log("seccccc", secret);
+    //console.log("seccccc", secret);
     const S3_BUCKET = config.S3_BUCKET_NAME + type;
-    console.log("S3_BUCKET", S3_BUCKET);
+    //console.log("S3_BUCKET", S3_BUCKET);
     // S3 Region
     const REGION = "ap-south-1";
 
@@ -86,7 +86,7 @@ const ContactForm = () => {
       accessKeyId: secret.s3key,
       secretAccessKey: secret.s3secret,
     });
-    //console.log("S3SECRET", S3SECRET);
+    ////console.log("S3SECRET", S3SECRET);
     const s3 = new AWS.S3({
       params: { Bucket: S3_BUCKET },
       region: REGION,
@@ -127,27 +127,27 @@ const ContactForm = () => {
       Body: file,
     };
 
-    //console.log("s3parms", params);
+    ////console.log("s3parms", params);
     // Uploading file to s3
 
     var upload = s3
       .putObject(params)
       .on("httpUploadProgress", (evt) => {
         // File uploading progress
-        console.log("Uploading " + parseInt((evt.loaded * 100) / evt.total) + "%");
+        //console.log("Uploading " + parseInt((evt.loaded * 100) / evt.total) + "%");
         setProgress("Uploaded " + parseInt((evt.loaded * 100) / evt.total) + "%");
       })
       .promise();
 
     upload.then(() => {
       const url = config.bucketurl + type + "/" + imagename;
-      console.log(url);
+      //console.log(url);
       if (type === "home") {
         const { thumbnail } = {};
         datas.thumbnail = url;
         datas.imageurl = url;
         datas.type = "home";
-        console.log("timeline", datas);
+        //console.log("timeline", datas);
       } else {
         return;
       }
@@ -155,7 +155,7 @@ const ContactForm = () => {
       fetch(config.aws_service_url + "/items", { method: "POST", headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }, mode: "no-cors", body: JSON.stringify(datas) })
         .then((response) => response)
         .then((data) => {
-          console.log("submit", data);
+          //console.log("submit", data);
           if (data.status == 200 || data.status == 0) {
             setMessage("Saved Sucessfully");
             alert("Saved Sucessfully");
@@ -164,14 +164,14 @@ const ContactForm = () => {
           }
         })
         .catch((err) => {
-          console.log("timelinerrror", err);
+          //console.log("timelinerrror", err);
           //setMessage(err.Message);
         });
     });
   };
   const handleFileChange = (e) => {
     // Uploaded file
-    console.log("file", e.target.files[0]);
+    //console.log("file", e.target.files[0]);
     const file = e.target.files[0];
     // Changing file state
 
@@ -184,17 +184,17 @@ const ContactForm = () => {
   };
   useEffect(() => {
     const fetchData = async () => {
-      console.log("ssnbloginisdefetch");
+      //console.log("ssnbloginisdefetch");
       const value = "home";
       const response = await axios.get(config.aws_service_url + "itemsbytype/" + value);
       const sorteddata = response?.data.sort((b, a) => a.date?.localeCompare(b.date));
       setPost(sorteddata);
-      console.log(value, sorteddata);
+      //console.log(value, sorteddata);
     };
     try {
       fetchData();
     } catch (ex) {
-      console.log("error", ex);
+      //console.log("error", ex);
     }
   }, []);
 
