@@ -239,7 +239,7 @@ const ContactForm = () => {
                   <option value="CREATTIVE">CREATIVE</option>
                   <option value="DECORATIONS">DECORATIONS</option>
                   <option value="SPORTS">SPORTS</option>
-                  <option value="SPORTS">EVENTS</option>
+                  <option value="EVENTS">EVENTS</option>
                   <option value="OTHERS">OTHERS</option>
                 </select>
                 {errors.category && <p>{errors.category.message}</p>}
