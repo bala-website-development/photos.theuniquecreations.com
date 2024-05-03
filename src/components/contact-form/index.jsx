@@ -27,7 +27,7 @@ const ContactForm = () => {
         html: body,
       }),
     };
-    console.log(requestOptions);
+    //console.log(requestOptions);
     try {
       fetch(config.email_service_url, requestOptions).then((response) => console.log(response.json()));
       //.then((data) => this.setState({ responsemessage: "Thanks for Contacting us." }));
@@ -35,7 +35,7 @@ const ContactForm = () => {
       setSuccessMsg("Thanks for Contacting us. Kindly check span folder in your email.");
       e.target.reset();
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       alert("There is an error", err);
     }
   };

@@ -22,14 +22,14 @@ const PopupVideo = ({ data }) => {
         if (dataViedo.items.length > 0) return;
       })
       .catch((err) => {
-        console.log("youtubeservice", err);
+        //console.log("youtubeservice", err);
         setLoading(false);
       });
   };
   useEffect(() => {
     //getYtVideoDetails();
     // eslint-disable-next-line
-    console.log("youtubeservice", data);
+    ////console.log("youtubeservice", data);
   }, []);
   return (
     <div className="single-portfolio">

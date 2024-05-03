@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { slugify } from "../../../utils";
 
 const PortfolioFilter = ({ categories }) => {
-  console.log("cat", categories);
+  //console.log("cat", categories);
   return (
     <div className="messonry-button text-center mb-50">
       <button data-filter="*" className="is-checked">
