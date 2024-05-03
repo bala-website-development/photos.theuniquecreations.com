@@ -6,8 +6,9 @@ import { flatDeep } from "../utils";
 const useMasonry = (tucdata, masonryListWrap, masonryGrid, btnWrap, btn) => {
   const [categories, setCategories] = useState([]);
   useEffect(() => {
+    console.log("tucdata", tucdata);
     const mixCategories1 = tucdata.map((item) => {
-      return item.title;
+      return item.category;
     });
     const allCat1 = flatDeep(mixCategories1, Infinity);
     const commonCategories = [...new Set(allCat1)];

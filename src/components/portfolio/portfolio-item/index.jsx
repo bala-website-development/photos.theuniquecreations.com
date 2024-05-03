@@ -15,7 +15,7 @@ const PortfolioItem = ({ portfolio }) => {
         </LightgalleryItem>
       </LightgalleryProvider>
       <div className="content">
-        <h3 className="title">{portfolio.title}</h3>
+        <h3 className="title">{portfolio.category}</h3>
         {/* <p className="desc">{portfolio.excerpt}</p> */}
       </div>
     </div>

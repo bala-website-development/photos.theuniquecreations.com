@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@aws-sdk/client-secrets-manager": "^3.543.0",
     "aos": "^2.3.4",
+    "aws-sdk": "^2.1587.0",
+    "axios": "^1.6.8",
     "disqus-react": "^1.0.11",
+    "dotenv": "^16.4.5",
     "imagesloaded": "^4.1.4",
     "isotope-layout": "^3.0.6",
     "package.json": "^2.0.1",
@@ -19,9 +23,11 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^5.0.1",
     "react-update": "^0.4.4",
+    "react-uuid": "^2.0.0",
     "reactstrap": "^8.9.0",
     "sass": "^1.32.8",
-    "swiper": "^6.5.0"
+    "swiper": "^6.5.0",
+    "uuid": "^9.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
