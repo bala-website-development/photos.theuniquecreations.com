@@ -12,12 +12,14 @@ const HomePage = () => {
   return (
     <React.Fragment>
       <Layout>
-        <SEO title="SSN Digital Media" />
+        <SEO title="SSN Digital Media Photography" />
         <div className="wrapper home-default-wrapper">
           <Header />
           <IntroContainer />
+
           <div className="main-content">
             <QuteContainer />
+
             <PortfolioContainer />
           </div>
           <Footer />
