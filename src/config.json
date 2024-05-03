@@ -19,10 +19,10 @@
   "fromemail": "SSN Digital Media<ssndigitalmediaservices@gmail.com>",
   "subject": "SSN Digital Media - Contact Us - ",
   "============": "============",
-  "S3_BUCKET_NAME": "ssndigitalmedia/ssndigitalmedia/qa/",
-  "bucketurl": "https://ssndigitalmedia.s3.ap-south-1.amazonaws.com/ssndigitalmedia/qa/",
-  "aws_service_url": "https://59vwrpwnqj.execute-api.ap-south-1.amazonaws.com/",
+  "S3_BUCKET_NAME": "ssndigitalmedia/ssndigitalmedia/prod/",
+  "bucketurl": "https://ssndigitalmedia.s3.ap-south-1.amazonaws.com/ssndigitalmedia/prod/",
+  "aws_service_url": "https://nz1ziknsig.execute-api.us-east-1.amazonaws.com/",
   "===========": "============",
   "aws_service_url_qa": "https://59vwrpwnqj.execute-api.ap-south-1.amazonaws.com/",
-  "aws_service_url_prod": "https://9z5mz8msg9.execute-api.us-east-1.amazonaws.com/"
+  "aws_service_url_prod": "https://nz1ziknsig.execute-api.us-east-1.amazonaws.com/"
 }

@@ -9,6 +9,7 @@ import axios from "axios";
 
 const ContactForm = () => {
   const [post, setPost] = useState([]);
+  const [authorise, setAuthorise] = useState(false);
   const [progress, setProgress] = useState("");
   const [message, setMessage] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
@@ -177,6 +178,10 @@ const ContactForm = () => {
     setFile(file);
     setMessage("");
   };
+  const password = (e) => {
+    if (e === "pappu") setAuthorise(true);
+    else setAuthorise(false);
+  };
   useEffect(() => {
     const fetchData = async () => {
       console.log("ssnbloginisdefetch");
@@ -195,79 +200,83 @@ const ContactForm = () => {
 
   return (
     <Fragment>
-      <form className="contact-form-wrapper" onSubmit={handleSubmit(onSubmit)}>
-        {/* <form className="contact-form-wrapper"> */}
-        <div className="row">
-          <div className="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div className="form-group">
-              <input
-                className="form-control"
-                type="text"
-                name="name"
-                placeholder="Image Name"
-                required={false}
-                ref={register({
-                  required: "Image Name is required",
-                })}
-              />
-              {errors.name && <p>{errors.name.message}</p>}
+      <>
+        <input className={!authorise ? "form-control" : "d-none"} type="password" onChange={(e) => password(e.target.value)} name="name" placeholder="password" required={true} />
+        <form className={authorise ? "contact-form-wrapper" : "d-none"} onSubmit={handleSubmit(onSubmit)}>
+          {/* <form className="contact-form-wrapper"> */}
+          <div className="row">
+            <div className="col-md-4" data-aos="fade-up" data-aos-delay="300">
+              <div className="form-group">
+                <input
+                  className="form-control"
+                  type="text"
+                  name="name"
+                  placeholder="Image Name"
+                  required={false}
+                  ref={register({
+                    required: "Image Name is required",
+                  })}
+                />
+                {errors.name && <p>{errors.name.message}</p>}
+              </div>
+            </div>
+            <div className="col-md-4" data-aos="fade-up" data-aos-delay="600">
+              <div className="form-group">
+                <select
+                  className="form-control"
+                  name="category"
+                  placeholder="Image Category"
+                  required={true}
+                  ref={register({
+                    required: "Category is required",
+                  })}
+                >
+                  <option value=""></option>
+                  <option value="NATURE">NATURE</option>
+                  <option value="COUPLES">COUPLES</option>
+                  <option value="PORTRAITS">PORTRAITS</option>
+                  <option value="KIDS">KIDS</option>
+                  <option value="CREATTIVE">CREATIVE</option>
+                  <option value="DECORATIONS">DECORATIONS</option>
+                  <option value="SPORTS">SPORTS</option>
+                  <option value="SPORTS">EVENTS</option>
+                  <option value="OTHERS">OTHERS</option>
+                </select>
+                {errors.category && <p>{errors.category.message}</p>}
+              </div>
+            </div>
+            <div className="col-md-4" data-aos="fade-up" data-aos-delay="900">
+              <div className="form-group">
+                <input
+                  className="form-control"
+                  type="file"
+                  name="image"
+                  placeholder="Upload Image"
+                  required={true}
+                  onChange={handleFileChange}
+                  ref={register({
+                    required: "File is required",
+                  })}
+                />
+                {errors.image && <p>{errors.image.message}</p>}
+              </div>
+            </div>
+            <div className="col-md-12" data-aos="fade-up">
+              <div className="form-group mb-0"></div>
+            </div>
+            <div className="p-1 mt-1">{successMsg}</div>
+            <div className="p-1 mt-1">{message}</div>
+            <div className="p-1 mt-1">{progress}</div>
+            <div className="col-md-12 text-center" data-aos="fade-up" data-aos-delay="300">
+              <div className="form-group mb-0">
+                <button className="btn-submit" type="submit">
+                  Upload Image
+                </button>
+              </div>
             </div>
           </div>
-          <div className="col-md-4" data-aos="fade-up" data-aos-delay="600">
-            <div className="form-group">
-              <select
-                className="form-control"
-                name="category"
-                placeholder="Image Category"
-                required={true}
-                ref={register({
-                  required: "Category is required",
-                })}
-              >
-                <option value=""></option>
-                <option value="NATURE">NATURE</option>
-                <option value="COUPLES">COUPLES</option>
-                <option value="PORTRAITS">PORTRAITS</option>
-                <option value="KIDS">KIDS</option>
-                <option value="CREATTIVE">CREATTIVE</option>
-                <option value="DECORATIONS">DECORATIONS</option>
-                <option value="SPORTS">SPORTS</option>
-                <option value="OTHERS">OTHERS</option>
-              </select>
-              {errors.category && <p>{errors.category.message}</p>}
-            </div>
-          </div>
-          <div className="col-md-4" data-aos="fade-up" data-aos-delay="900">
-            <div className="form-group">
-              <input
-                className="form-control"
-                type="file"
-                name="image"
-                placeholder="Upload Image"
-                required={true}
-                onChange={handleFileChange}
-                ref={register({
-                  required: "File is required",
-                })}
-              />
-              {errors.image && <p>{errors.image.message}</p>}
-            </div>
-          </div>
-          <div className="col-md-12" data-aos="fade-up">
-            <div className="form-group mb-0"></div>
-          </div>
-          <div className="p-1 mt-1">{successMsg}</div>
-          <div className="p-1 mt-1">{message}</div>
-          <div className="p-1 mt-1">{progress}</div>
-          <div className="col-md-12 text-center" data-aos="fade-up" data-aos-delay="300">
-            <div className="form-group mb-0">
-              <button className="btn-submit" type="submit">
-                Upload Image
-              </button>
-            </div>
-          </div>
-        </div>
-      </form>
+        </form>
+      </>
     </Fragment>
   );
 };
