@@ -45,8 +45,8 @@ const PortfolioContainer = () => {
       //console.log("ssnbloginisdefetch");
       const value = "home";
       const response = await axios.get(config.aws_service_url + "itemsbytype/" + value);
-      const sorteddata = response?.data.sort((b, a) => a.date?.localeCompare(b.date));
-      let active1 = sorteddata.filter((filter1) => filter1.isactive === 1);
+      //const sorteddata = response?.data.sort((a, b) => a.date?.localeCompare(b.date));
+      let active1 = response?.data.filter((filter1) => filter1.isactive === 1);
       setGalleryImage(active1);
       //console.log("ssnbloginisdefetch value", active1);
     };
