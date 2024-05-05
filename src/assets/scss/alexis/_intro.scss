@@ -24,8 +24,8 @@
     z-index: 9;
     display: flex;
     align-items: center;
-    height: 845px;
-    padding: 50px 0;
+    height: 645px;
+    padding: 20px 0;
     // Responsive
     @media #{$xxl-device} {
         height: 600px;
@@ -40,7 +40,7 @@
         height: 450px;
     }
     @media #{$xxs-device} {
-        height: 400px;
+        height: 250px;
     }
 
     & .container {

@@ -19,7 +19,6 @@ const HomePage = () => {
 
           <div className="main-content">
             <QuteContainer />
-
             <PortfolioContainer />
           </div>
           <Footer />

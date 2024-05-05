@@ -14,7 +14,7 @@ const QuteContainer = () => {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container d-none">
         <div className="row text-center">
           <div className="col-md-12 col-lg-11 col-xl-10 m-auto py-2">
             <img src={config.bannerbg} />

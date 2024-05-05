@@ -4,12 +4,12 @@
   "websitetitle": "SSN Digital Media | www.ssndigitalmedia.com",
   "storage_old": "photos.theuniquecreations.com",
 
-  "==========": "============",
+  "==========": "======old======",
   "service_url_old": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/api/",
   "service_url_dev_old": "https://asia-south1-tuc-shopping-dev.cloudfunctions.net/tuc_shop_node_api/api/",
   "service_url_local": "http://localhost:8000/api/",
   "service_url_prod_old": "https://asia-south1-tucfbclouddb.cloudfunctions.net/tuc_shop_node_api/api/",
-  "homeimage": "https://firebasestorage.googleapis.com/v0/b/tucfbclouddb.appspot.com/o/TUC%2FE-commerce-4.png?alt=media&token=ad76ff18-56fb-49b9-a1f7-2255deae0877",
+  "homeimage_old": "https://firebasestorage.googleapis.com/v0/b/tucfbclouddb.appspot.com/o/TUC%2FE-commerce-4.png?alt=media&token=ad76ff18-56fb-49b9-a1f7-2255deae0877",
   "logo_old": "https://firebasestorage.googleapis.com/v0/b/tucfbclouddb.appspot.com/o/tsalastudio.com%2Flogo%2Flogo.jpeg?alt=media&token=2a0ea36d-d6b0-4ad3-8701-a4daa8dda261",
   "tucloginimage_old": "https://firebasestorage.googleapis.com/v0/b/tucfbclouddb.appspot.com/o/TUC%2Fslider%2Fslidetuc1.jpg?alt=media&token=ea1cb71c-2ff8-4365-95b3-e678d1306916",
 
