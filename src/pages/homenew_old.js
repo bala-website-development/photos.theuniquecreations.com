@@ -20,7 +20,6 @@ const Portfolio = () => {
           <Header />
           <div className="main-content">
             <QuteContainer />
-
             <PortfolioContainer />
           </div>
           <Footer />

@@ -15,13 +15,12 @@ const Portfolio = () => {
     <React.Fragment>
       <Layout>
         <SEO title="SSN Digital Media Photography" />
-        {/* <IntroContainer /> */}
+
         <div className="wrapper home-default-wrapper">
           <Header />
-
+          <IntroContainer />
           <div className="main-content">
             <QuteContainer />
-
             <PortfolioContainer />
             {/* <Instagram /> */}
           </div>

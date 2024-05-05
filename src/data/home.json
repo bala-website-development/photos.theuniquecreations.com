@@ -3,10 +3,10 @@
     "slider": [
       {
         "id": 1,
-        "backgroundImage": "https://firebasestorage.googleapis.com/v0/b/tucfbclouddb.appspot.com/o/photos.theuniquecreations.com%2Fbanner%2Fbanner.jpg?alt=media&token=373f3a98-1c4b-4014-b15d-955ce76c7b91",
-        "title": "",
-        "subTitle": "",
-        "desc": "",
+        "backgroundImage": "https://ssndigitalmedia.s3.ap-south-1.amazonaws.com/ssndigitalmedia/prod/websiteimages/slide1.jpg",
+        "title": "SSN Digital Media",
+        "subTitle": "Photography",
+        "desc": "Events | Wedding | Parties | in Nashville , Louisville",
         "buttonText": ""
       }
     ]
