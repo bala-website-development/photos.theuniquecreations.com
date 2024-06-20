@@ -38,7 +38,7 @@ const Footer = () => {
                   <p>
                     © {new Date().getFullYear()} <span></span> |{" "}
                     <a target="_blank" href="#" rel="noreferrer">
-                      SSN Digital Media LLC
+                      SSN Digital Media Services LLC
                     </a>
                   </p>
                 </div>
