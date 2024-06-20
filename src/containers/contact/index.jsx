@@ -8,7 +8,7 @@ const ContactContainer = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-10 col-lg-8 m-auto text-center" data-aos="fade-up">
-            <h2 className="title">Contact us for any further questions, possible projects &amp; business partnerships</h2>
+            <h2 className="title">Contact us for bookings, questions, possible projects &amp; business partnerships</h2>
           </div>
         </div>
         <div className="row">
@@ -28,12 +28,10 @@ const ContactContainer = () => {
               <div className="text-center" data-aos="fade-up">
                 <ContactForm />
               </div>
-              <div className="text-center d-none" data-aos="fade-up ">
-                <h2 className="title">Contact us at below social links</h2>
-              </div>
+              <br />
+              <br />
+              <div className="text-center">Contact us at below social links</div>
               <div className="text-center" data-aos="fade-up">
-                <br />
-                <br />
                 <h2 className="title">
                   {" "}
                   <big>
@@ -55,6 +53,10 @@ const ContactContainer = () => {
                   Contact :
                   <a href="mailto:ssndigitalmediaservices@gmail.com" className="px-1 text-alert" target="_blank" rel="noopener noreferrer">
                     ssndigitalmediaservices@gmail.com
+                  </a>
+                  <br /> <br />
+                  <a href="https://g.page/r/CXPd4JFrWEg8EBM/review" className="p-2 border rounded bg-light">
+                    Rate and Review us on Google
                   </a>
                 </h2>
               </div>

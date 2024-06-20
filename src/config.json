@@ -1,7 +1,7 @@
 {
   "domain": "ssndigitalmedia.com",
   "website": "www.ssndigitalmedia.com",
-  "websitetitle": "SSN Digital Media | www.ssndigitalmedia.com",
+  "websitetitle": "SSN Digital Media Services | www.ssndigitalmedia.com",
   "storage_old": "photos.theuniquecreations.com",
 
   "==========": "======old======",
@@ -14,9 +14,9 @@
   "tucloginimage_old": "https://firebasestorage.googleapis.com/v0/b/tucfbclouddb.appspot.com/o/TUC%2Fslider%2Fslidetuc1.jpg?alt=media&token=ea1cb71c-2ff8-4365-95b3-e678d1306916",
 
   "============": "============",
-  "logotitle": "SSN Digital Media",
-  "fromemail": "SSN Digital Media<ssndigitalmediaservices@gmail.com>",
-  "subject": "SSN Digital Media - Contact Us - ",
+  "logotitle": "SSN Digital Media Services",
+  "fromemail": "SSN Digital Media Services<ssndigitalmediaservices@gmail.com>",
+  "subject": "SSN Digital Media Services - Contact Us - ",
   "S3_BUCKET_NAME": "ssndigitalmedia/ssndigitalmedia/prod/",
   "bucketurl": "https://ssndigitalmedia.s3.ap-south-1.amazonaws.com/ssndigitalmedia/prod/",
   "aws_service_url": "https://nz1ziknsig.execute-api.us-east-1.amazonaws.com/",
