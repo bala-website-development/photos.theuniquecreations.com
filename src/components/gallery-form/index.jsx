@@ -97,8 +97,8 @@ const ContactForm = () => {
       setMessage("Please select file");
       return;
     }
-    if (file?.size > 400000) {
-      setMessage("Please upload file less than 400 kb");
+    if (file?.size > 700000) {
+      setMessage("Please upload file less than 700 kb");
       return;
     }
     const slugify = function (text) {
