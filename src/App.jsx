@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 import "lightgallery.js/dist/css/lightgallery.css";
 import { useEffect } from "react";
 import "react-modal-video/scss/modal-video.scss";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/swiper.scss";
 import "./assets/css/animate.css";
@@ -61,7 +61,9 @@ const App = () => {
           <Route path={`${process.env.PUBLIC_URL + "/tag/:slug"}`} component={BlogTag} />
           <Route path={`${process.env.PUBLIC_URL + "/date/:date"}`} component={BlogDate} />
           <Route path={`${process.env.PUBLIC_URL + "/author/:author"}`} component={BlogAuthor} />
-          <Route path={`${process.env.PUBLIC_URL + "/blog-details/:id"}`} component={BlogDetails} /> */}
+         {/* <Route path={`${process.env.PUBLIC_URL + "/blog-details/:id"}`} component={BlogDetails} /> */}
+          {/* Fallback route for incorrect URLs */}
+          <Redirect to={`${process.env.PUBLIC_URL}/`} />
         </Switch>
       </NavScrollTop>
     </Router>
