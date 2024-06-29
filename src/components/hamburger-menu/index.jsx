@@ -65,7 +65,7 @@ const HamburgerMenu = ({ show, onClose }) => {
                   <NavLink to={process.env.PUBLIC_URL + "/about"}>About</NavLink>
                 </li>
                 <li className="">
-                  <NavLink to={process.env.PUBLIC_URL + "/video-gallery"}>Video Gallery</NavLink>
+                  <NavLink to={process.env.PUBLIC_URL + "/video-gallery"}>Video</NavLink>
                 </li>
                 <li>
                   <NavLink to={process.env.PUBLIC_URL + "/contact"}>Contact</NavLink>

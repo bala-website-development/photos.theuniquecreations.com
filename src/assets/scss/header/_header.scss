@@ -14,10 +14,12 @@
 
 .logotitle h1
 {
-font-family: "Dancing Script" !important;
-font-size:auto !important;
- color: #865a00 !important;
+font-family: "Libre Baskerville", serif;
+font-size:30px !important;
+ color: #b37905 !important;
  font-weight: normal;
+ text-wrap: none;
+ vertical-align: middle !important;
 }
 .min-height-700
 {
@@ -262,7 +264,7 @@ font-size:auto !important;
             padding: 20px 0 20px;
             .logotitle h1 {
               
-               // font-size: 60px !important;
+                font-size: 30px !important;
             
             
             }
@@ -270,7 +272,7 @@ font-size:auto !important;
         @media #{$sm-device} {
             padding: 10px 0 10px;
             .logotitle h1 {
-               // font-size: 60px !important;
+                font-size: 30px !important;
             }
         }
         .container-fluid {
