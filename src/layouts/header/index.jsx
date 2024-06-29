@@ -11,8 +11,10 @@ const Footer = () => {
             <div className="footer-content justify-content-between">
               <div className="widget-item text-center">
                 <div className="about-widget logotitle py-1 pt-1">
-                  {/* <FooterLogo image={`${process.env.PUBLIC_URL}/img/logo.png`} /> */}
-                  <h1 className="text-nowrap px-3">{config.logotitle}</h1>
+                  <h1 className="px-3 mt-1">
+                    <FooterLogo image={`${process.env.PUBLIC_URL}/img/logo.png`}></FooterLogo>
+                    {config.logotitle}
+                  </h1>
                 </div>
                 <div className="widget-copyright d-none">
                   <p>
@@ -37,7 +39,7 @@ const Footer = () => {
                         <Link to={process.env.PUBLIC_URL + "/about"}>About</Link>
                       </li>
                       <li>
-                        <Link to={process.env.PUBLIC_URL + "/video-gallery"}>Video Gallery</Link>
+                        <Link to={process.env.PUBLIC_URL + "/video-gallery"}>Video</Link>
                       </li>
                       <li>
                         <Link to={process.env.PUBLIC_URL + "/contact"}>Contact</Link>
