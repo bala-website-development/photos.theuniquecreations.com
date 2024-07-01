@@ -236,7 +236,7 @@ const ContactForm = () => {
                   <option value="COUPLES">COUPLES</option>
                   <option value="PORTRAITS">PORTRAITS</option>
                   <option value="KIDS">KIDS</option>
-                  <option value="CREATTIVE">CREATIVE</option>
+                  <option value="CREATIVE">CREATIVE</option>
                   <option value="DECORATIONS">DECORATIONS</option>
                   <option value="SPORTS">SPORTS</option>
                   <option value="EVENTS">EVENTS</option>
