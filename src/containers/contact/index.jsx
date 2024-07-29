@@ -35,7 +35,7 @@ const ContactContainer = () => {
                 <h2 className="title">
                   {" "}
                   <big>
-                    <a href="https://wa.me/18126108654" className="px-1 text-success" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/15027802999" className="px-1 text-success" target="_blank" rel="noopener noreferrer">
                       <i className="icofont-whatsapp fa-lg"></i>
                     </a>
                   </big>{" "}
