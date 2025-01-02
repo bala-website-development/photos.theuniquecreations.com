@@ -14,7 +14,7 @@ import "./assets/css/icofont.css";
 import "./assets/scss/style.scss";
 import NavScrollTop from "./components/nav-scroll-top";
 import AboutPage from "./pages/about";
-import Blog from "./pages/blog";
+import Blog from "./pages/album";
 import Contact from "./pages/contact";
 import Admin from "./pages/admin";
 // import HomePage from "./pages/index";
@@ -54,6 +54,7 @@ const App = () => {
           {/* <Route path={`${process.env.PUBLIC_URL + "/homenew"}`} component={PortfolioNew} /> */}
           <Route path={`${process.env.PUBLIC_URL + "/video-gallery"}`} component={VideoGallery} />
           <Route path={`${process.env.PUBLIC_URL + "/contact"}`} component={Contact} />
+          <Route path={`${process.env.PUBLIC_URL + "/album/:slug"}`} component={Blog} />
           {/* <Route path={`${process.env.PUBLIC_URL + "/portfolio"}`} component={Portfolio} /> */}
           {/* <Route path={`${process.env.PUBLIC_URL + "/portfolio-details/:id"}`} component={PortfolioDetails} /> */}
           {/* <Route path={`${process.env.PUBLIC_URL + "/blog"}`} component={Blog} />
