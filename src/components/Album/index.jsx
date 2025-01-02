@@ -40,13 +40,15 @@ const AlbumDetail = () => {
       {album && (
         <>
           {/* Responsive Banner Section */}
-          <header style={styles.banner}>
-            <img src={album.bannerimage} alt={album.title} style={styles.bannerImage} />
-          </header>
+          {album.showbanner && (
+            <header style={styles.banner}>
+              <img src={album.bannerimage} alt={album.title} style={styles.bannerImage} />
+            </header>
+          )}
 
           {/* Album Card Section */}
           <div style={styles.container}>
-            <section style={styles.albumCard}>
+            <section style={styles.albumCard} align="center">
               <h1 style={styles.albumTitle}>{album.title}</h1>
 
               {/* Thumbnail - Clickable */}
