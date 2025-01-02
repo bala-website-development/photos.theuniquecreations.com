@@ -47,29 +47,24 @@ const AlbumDetail = () => {
           {/* Album Card Section */}
           <div style={styles.container}>
             <section style={styles.albumCard}>
-              {/* Album Title */}
               <h1 style={styles.albumTitle}>{album.title}</h1>
 
               {/* Thumbnail - Clickable */}
               <div style={styles.thumbnailWrapper}>
-                <a href={album.albumlink} target="_blank" rel="noopener noreferrer" style={styles.thumbnailLink}>
+                <a href={album.albumlink} target="_blank" rel="noopener noreferrer">
                   <img src={album.thumbnail} alt={album.title} style={styles.thumbnailImg} />
                 </a>
               </div>
 
-              {/* Description */}
               <p style={styles.albumDescription}>{album.description}</p>
 
-              {/* Album Name */}
               <div style={styles.albumMeta}>
-                <strong>Album Name: </strong>
                 <span style={styles.albumName}>{album.albumname}</span>
               </div>
 
-              {/* View Album Button */}
               <div>
-                <a href={album.albumlink} target="_blank" className="btn-warning text-dark w-100" rel="noopener noreferrer" style={styles.downloadBtn}>
-                  View Album
+                <a href={album.albumlink} target="_blank" align="center" className="btn-warning text-dark w-100" rel="noopener noreferrer" style={styles.downloadBtn}>
+                  View Photo Album
                 </a>
               </div>
             </section>
@@ -77,11 +72,10 @@ const AlbumDetail = () => {
 
           {/* Footer Section */}
           <footer style={styles.footer}>
-            <div style={styles.footerLinks}>
-              <a href="/" style={styles.footerLink}>
-                Home
-              </a>{" "}
-              | <span>SSN Digital Media Services</span>
+            <div style={styles.footerLinks} align="center">
+              <a href="/" className="text-secondary" style={styles.footerLink}>
+                <span>SSN Digital Media - Photography</span>
+              </a>
             </div>
           </footer>
         </>
@@ -93,9 +87,10 @@ const AlbumDetail = () => {
 // Inline Styles
 const styles = {
   pageContainer: {
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh",
     fontFamily: "'Arial', sans-serif",
-    textAlign: "center",
-    paddingBottom: "0rem",
   },
   banner: {
     width: "100%",
@@ -110,6 +105,7 @@ const styles = {
     borderRadius: "10px",
   },
   container: {
+    flex: 1, // Make the container grow to fill space
     maxWidth: "900px",
     margin: "0 auto",
     padding: "2rem 1rem",
@@ -118,11 +114,11 @@ const styles = {
     backgroundColor: "#fff",
     borderRadius: "12px",
     boxShadow: "0 4px 10px rgba(0, 0, 0, 0.1)",
-    padding: "2rem",
+    padding: "1rem",
     marginBottom: "2rem",
   },
   albumTitle: {
-    fontSize: "2.5rem",
+    fontSize: "1.5rem",
     marginBottom: "1rem",
   },
   thumbnailWrapper: {
@@ -133,12 +129,8 @@ const styles = {
     maxWidth: "600px",
     height: "auto",
     objectFit: "cover",
-    borderRadius: "10px",
+    borderRadius: "5px",
     cursor: "pointer",
-    transition: "transform 0.3s ease",
-  },
-  thumbnailImgHover: {
-    transform: "scale(1.05)",
   },
   albumDescription: {
     fontSize: "1.2rem",
@@ -156,31 +148,23 @@ const styles = {
   downloadBtn: {
     display: "inline-block",
     padding: "1rem 2rem",
-
-    color: "#fff",
-    borderRadius: "8px",
+    borderRadius: "5px",
     textDecoration: "none",
     fontSize: "1rem",
-    transition: "background-color 0.3s",
   },
   footer: {
-    marginTop: "4rem",
-    padding: "1rem 0",
+    padding: "0.5rem 0",
     backgroundColor: "#f8f9fa",
     borderTop: "1px solid #ddd",
   },
   footerLinks: {
     marginBottom: "0rem",
-    fontSize: "1.1rem",
+    fontSize: "1rem",
   },
   footerLink: {
     textDecoration: "none",
     color: "#007bff",
     margin: "0 0.5rem",
-  },
-  footerText: {
-    fontSize: "1rem",
-    color: "#555",
   },
   loadingText: {
     fontSize: "1.5rem",
