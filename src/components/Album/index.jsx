@@ -73,14 +73,13 @@ const AlbumDetail = () => {
                   View Photo Album
                 </a>
               </div>
-              {album.downloadbtnlink ||
-                (album.downloadbtnlink !== "" && (
-                  <div>
-                    <a href={album.downloadbtnlink} target="_blank" align="center" className="btn-warning text-dark w-100" rel="noopener noreferrer" style={styles.downloadBtn}>
-                      {album.downloadbtnname || "Download"}
-                    </a>
-                  </div>
-                ))}
+              {album.downloadbtnlink && (
+                <div className="mt-1">
+                  <a href={album.downloadbtnlink} target="_blank" align="center" className="btn-warning text-dark w-100" rel="noopener noreferrer" style={styles.downloadBtn}>
+                    {album.downloadbtnname || "Download"}
+                  </a>
+                </div>
+              )}
             </section>
           </div>
 
