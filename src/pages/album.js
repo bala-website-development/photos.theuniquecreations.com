@@ -1,29 +1,29 @@
 import React from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
-import BlogContainer from "../containers/blog/blog-grid";
-import PageTitleContainerTwo from "../containers/global/page-title-two";
+import Album from "../components/Album";
+import Instagram from "../components/instagramfeed";
+import QuteContainer from "../containers/global/global-qute/index.jsx";
+import PortfolioContainer from "../containers/global/portfolio/index.jsx";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
 
-const Blog = () => {
+import IntroContainer from "../containers/home/intro/index.jsx";
+
+const Portfolio = () => {
   return (
     <React.Fragment>
       <Layout>
-        <SEO title="SSN Digital Media Photography | Blog" />
+        <SEO title="SSN Digital Media Photography" />
         <div className="wrapper home-default-wrapper">
-          <Header classOption="hb-border" />
           <div className="main-content">
-            <PageTitleContainerTwo subTitle="Our Blog" title="Write &amp; Share" />
-            <BlogContainer />
+            <Album />
           </div>
-          <Footer />
-          <ScrollToTop />
         </div>
       </Layout>
     </React.Fragment>
   );
 };
 
-export default Blog;
+export default Portfolio;
