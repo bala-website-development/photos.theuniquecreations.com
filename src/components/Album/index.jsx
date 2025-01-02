@@ -28,7 +28,11 @@ const AlbumDetail = () => {
   };
 
   if (loading) {
-    return <p style={styles.loadingText}>Loading album details...</p>;
+    return (
+      <p style={styles.loadingText} className="px-4">
+        Loading album details...
+      </p>
+    );
   }
 
   if (error) {
@@ -69,6 +73,14 @@ const AlbumDetail = () => {
                   View Photo Album
                 </a>
               </div>
+              {album.downloadbtnlink ||
+                (album.downloadbtnlink !== "" && (
+                  <div>
+                    <a href={album.downloadbtnlink} target="_blank" align="center" className="btn-warning text-dark w-100" rel="noopener noreferrer" style={styles.downloadBtn}>
+                      {album.downloadbtnname || "Download"}
+                    </a>
+                  </div>
+                ))}
             </section>
           </div>
 
