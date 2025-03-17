@@ -67,16 +67,46 @@ const AlbumDetail = () => {
               <div style={styles.albumMeta}>
                 <span style={styles.albumName}>{album.albumname}</span>
               </div>
-
-              <div>
-                <a href={album.albumlink} target="_blank" align="center" className="btn-warning text-dark w-100" rel="noopener noreferrer" style={styles.downloadBtn}>
-                  View Photo Album
-                </a>
-              </div>
+              {album.albumlink && (
+                <div>
+                  <a href={album.albumlink} target="_blank" align="center" className="btn-warning text-dark w-100" rel="noopener noreferrer" style={styles.downloadBtn}>
+                    View Photo Album
+                  </a>
+                </div>
+              )}
               {album.downloadbtnlink && (
                 <div className="mt-1">
                   <a href={album.downloadbtnlink} target="_blank" align="center" className="btn-warning text-dark w-100" rel="noopener noreferrer" style={styles.downloadBtn}>
                     {album.downloadbtnname || "Download"}
+                  </a>
+                </div>
+              )}
+              {/* added new */}
+              {album.viewlink1 && (
+                <div className="mt-1">
+                  <a href={album.viewlink1} target="_blank" align="center" className="btn-warning text-dark w-100" rel="noopener noreferrer" style={styles.downloadBtn}>
+                    {album.viewlinkname1 || "Download"}
+                  </a>
+                </div>
+              )}
+              {album.viewlink2 && (
+                <div className="mt-1">
+                  <a href={album.viewlink2} target="_blank" align="center" className="btn-warning text-dark w-100" rel="noopener noreferrer" style={styles.downloadBtn}>
+                    {album.viewlinkname2 || "Download"}
+                  </a>
+                </div>
+              )}
+              {album.downloadbtnlink1 && (
+                <div className="mt-1">
+                  <a href={album.downloadbtnlink1} target="_blank" align="center" className="btn-warning text-dark w-100" rel="noopener noreferrer" style={styles.downloadBtn}>
+                    {album.downloadbtnname1 || "Download"}
+                  </a>
+                </div>
+              )}
+              {album.downloadbtnlink2 && (
+                <div className="mt-1">
+                  <a href={album.downloadbtnlink2} target="_blank" align="center" className="btn-warning text-dark w-100" rel="noopener noreferrer" style={styles.downloadBtn}>
+                    {album.downloadbtnname2 || "Download"}
                   </a>
                 </div>
               )}
