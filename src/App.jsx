@@ -19,6 +19,7 @@ import Contact from "./pages/contact";
 import Admin from "./pages/admin";
 // import HomePage from "./pages/index";
 import Portfolio from "./pages/home";
+import Rentals from "./pages/rentals";
 // import PortfolioNew from "./pages/homenew";
 import VideoGallery from "./pages/video-gallery";
 import BlogAuthor from "./templates/blog-author";
@@ -54,6 +55,7 @@ const App = () => {
           {/* <Route path={`${process.env.PUBLIC_URL + "/homenew"}`} component={PortfolioNew} /> */}
           <Route path={`${process.env.PUBLIC_URL + "/video-gallery"}`} component={VideoGallery} />
           <Route path={`${process.env.PUBLIC_URL + "/contact"}`} component={Contact} />
+          <Route path={`${process.env.PUBLIC_URL + "/rentals"}`} component={Rentals} />
           <Route path={`${process.env.PUBLIC_URL + "/album/:slug"}`} component={Blog} />
           {/* <Route path={`${process.env.PUBLIC_URL + "/portfolio"}`} component={Portfolio} /> */}
           {/* <Route path={`${process.env.PUBLIC_URL + "/portfolio-details/:id"}`} component={PortfolioDetails} /> */}
