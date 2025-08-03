@@ -3,4 +3,5 @@ Allow: /about
 Allow: /
 Allow: /contact
 Allow: /video-gallery
+Allow: /rentals
 Sitemap: https://www.ssndigitalmedia.com/sitemap.txt
