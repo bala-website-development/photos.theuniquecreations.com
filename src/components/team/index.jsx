@@ -10,9 +10,9 @@ const Team = ({ data }) => {
 
       <div className="content">
         <div className="member-info">
-          <h3 className="name">
+          <p className="name">
             <Link dangerouslySetInnerHTML={{ __html: data.name }}></Link>
-          </h3>
+          </p>
           <span className="designation">{data.designation}</span>
         </div>
         <div className="member-icons">

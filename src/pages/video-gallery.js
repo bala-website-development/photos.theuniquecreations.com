@@ -15,7 +15,7 @@ const VideoGallery = () => {
         <div className="wrapper home-default-wrapper">
           <Header classOption="hb-border" />
           <div className="main-content">
-            <PageTitleContainerTwo subTitle="Video Gallery" title="Write &amp; Share" />
+            <PageTitleContainerTwo subTitle="Video Gallery" title="Channel Videos" />
             <VideoGalleryContainer />
           </div>
           <Footer />

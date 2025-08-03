@@ -1,22 +1,25 @@
 import React from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
-import ContactContainer from "../containers/contact";
-import MapContainer from "../containers/global/map";
+import QuteContainer from "../containers/global/global-qute/index.jsx";
+import PortfolioContainer from "../containers/global/portfolio/index.jsx";
+import IntroContainer from "../containers/home/intro/index.jsx";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
 
-const Contact = () => {
+const HomePage = () => {
   return (
     <React.Fragment>
       <Layout>
-        <SEO title="SSN Digital Media Photography | Contact" />
+        <SEO title="SSN Digital Media Photography" />
         <div className="wrapper home-default-wrapper">
-          <Header classOption="hb-border" />
+          <Header />
+          <IntroContainer />
+
           <div className="main-content">
-            <ContactContainer />
-            {/* <MapContainer /> */}
+            <QuteContainer />
+            <PortfolioContainer />
           </div>
           <Footer />
           <ScrollToTop />
@@ -26,4 +29,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default HomePage;

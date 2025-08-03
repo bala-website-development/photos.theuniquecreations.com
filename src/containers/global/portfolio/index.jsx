@@ -5,6 +5,7 @@ import PortfolioData from "../../../data/portfolio.json";
 import useMasonry from "../../../hooks/use-masonry";
 import { slugify } from "../../../utils";
 import config from "../../../config.json";
+import axios from "axios";
 const PortfolioContainer = () => {
   // Isotope Categories list JS
   const [tucdata, setGalleryImage] = useState([]);
@@ -31,17 +32,29 @@ const PortfolioContainer = () => {
         let active1 = data1.filter((filter1) => filter1.isactive === 1 && filter1.viewingallery === 1);
         setGalleryImage(active1);
         setLoading(false);
-        console.log("galleryimages", data1);
+        //console.log("galleryimages", data1);
       })
       .catch((err) => {
         setNetworkError("Something went wrong, Please try again later!!");
-        console.log("galleryimages", err);
+        //console.log("galleryimages", err);
         setLoading(false);
       });
   };
   useEffect(() => {
-    getGalleryDetails();
-    // eslint-disable-next-line
+    const fetchData = async () => {
+      //console.log("ssnbloginisdefetch");
+      const value = "home";
+      const response = await axios.get(config.aws_service_url + "itemsbytype/" + value);
+      //const sorteddata = response?.data.sort((a, b) => a.date?.localeCompare(b.date));
+      let active1 = response?.data.filter((filter1) => filter1.isactive === 1);
+      setGalleryImage(active1);
+      //console.log("ssnbloginisdefetch value", active1);
+    };
+    try {
+      fetchData();
+    } catch (ex) {
+      //console.log("error", ex);
+    }
   }, []);
 
   const { categories } = useMasonry(tucdata, ".portfolio-list", ".masonry-grid", ".messonry-button", ".messonry-button button");
@@ -59,8 +72,7 @@ const PortfolioContainer = () => {
           <div className="col resizer"></div>
           {tucdata &&
             tucdata.map((portfolio) => (
-              <div key={portfolio.gallery_id} className={`col masonry-grid mb-10 ${portfolio.title}`}>
-                {/*<div  key={portfolio.id}  className={`col masonry-grid mb-30 ${portfolio.categories.map((cat) => slugify(cat)).join(" ")}`} > */}
+              <div key={portfolio.id} className={`col masonry-grid mb-10 ${portfolio.category}`}>
                 <PortfolioItem portfolio={portfolio} />
               </div>
             ))}

@@ -1,22 +1,21 @@
 import React from "react";
 import ScrollToTop from "../components/scroll-to-top";
 import SEO from "../components/seo";
-import BlogContainer from "../containers/blog/blog-grid";
-import PageTitleContainerTwo from "../containers/global/page-title-two";
+import AdminContainer from "../containers/admin";
+import MapContainer from "../containers/global/map";
 import Footer from "../layouts/footer";
 import Header from "../layouts/header/index";
 import Layout from "../layouts/index";
 
-const Blog = () => {
+const Admin = () => {
   return (
     <React.Fragment>
       <Layout>
-        <SEO title="SSN Digital Media Photography || Blog" />
+        <SEO title="SSN Digital Media | Admin" />
         <div className="wrapper home-default-wrapper">
           <Header classOption="hb-border" />
           <div className="main-content">
-            <PageTitleContainerTwo subTitle="Our Blog" title="Write &amp; Share" />
-            <BlogContainer />
+            <AdminContainer />
           </div>
           <Footer />
           <ScrollToTop />
@@ -26,4 +25,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Admin;

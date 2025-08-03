@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 import "lightgallery.js/dist/css/lightgallery.css";
 import { useEffect } from "react";
 import "react-modal-video/scss/modal-video.scss";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/swiper.scss";
 import "./assets/css/animate.css";
@@ -14,10 +14,13 @@ import "./assets/css/icofont.css";
 import "./assets/scss/style.scss";
 import NavScrollTop from "./components/nav-scroll-top";
 import AboutPage from "./pages/about";
-import Blog from "./pages/blog";
+import Blog from "./pages/album";
 import Contact from "./pages/contact";
-import HomePage from "./pages/index";
-import Portfolio from "./pages/portfolio";
+import Admin from "./pages/admin";
+// import HomePage from "./pages/index";
+import Portfolio from "./pages/home";
+import Rentals from "./pages/rentals";
+// import PortfolioNew from "./pages/homenew";
 import VideoGallery from "./pages/video-gallery";
 import BlogAuthor from "./templates/blog-author";
 import BlogCategory from "./templates/blog-category";
@@ -35,6 +38,12 @@ const App = () => {
       easing: "ease",
     });
     AOS.refresh();
+    if (process.env.NODE_ENV === "production") {
+      //console.log("Welcome to production");
+    }
+    if (process.env.DEBUG) {
+      //console.log("Debugging output");
+    }
   }, []);
   return (
     <Router>
@@ -42,16 +51,22 @@ const App = () => {
         <Switch>
           <Route path={`${process.env.PUBLIC_URL + "/"}`} exact component={Portfolio} />
           <Route path={`${process.env.PUBLIC_URL + "/about"}`} component={AboutPage} />
-          <Route path={`${process.env.PUBLIC_URL + "/portfolio"}`} component={Portfolio} />
+          <Route path={`${process.env.PUBLIC_URL + "/admin"}`} component={Admin} />
+          {/* <Route path={`${process.env.PUBLIC_URL + "/homenew"}`} component={PortfolioNew} /> */}
           <Route path={`${process.env.PUBLIC_URL + "/video-gallery"}`} component={VideoGallery} />
-          <Route path={`${process.env.PUBLIC_URL + "/portfolio-details/:id"}`} component={PortfolioDetails} />
-          <Route path={`${process.env.PUBLIC_URL + "/blog"}`} component={Blog} />
+          <Route path={`${process.env.PUBLIC_URL + "/contact"}`} component={Contact} />
+          <Route path={`${process.env.PUBLIC_URL + "/rentals"}`} component={Rentals} />
+          <Route path={`${process.env.PUBLIC_URL + "/album/:slug"}`} component={Blog} />
+          {/* <Route path={`${process.env.PUBLIC_URL + "/portfolio"}`} component={Portfolio} /> */}
+          {/* <Route path={`${process.env.PUBLIC_URL + "/portfolio-details/:id"}`} component={PortfolioDetails} /> */}
+          {/* <Route path={`${process.env.PUBLIC_URL + "/blog"}`} component={Blog} />
           <Route path={`${process.env.PUBLIC_URL + "/category/:slug"}`} component={BlogCategory} />
           <Route path={`${process.env.PUBLIC_URL + "/tag/:slug"}`} component={BlogTag} />
           <Route path={`${process.env.PUBLIC_URL + "/date/:date"}`} component={BlogDate} />
           <Route path={`${process.env.PUBLIC_URL + "/author/:author"}`} component={BlogAuthor} />
-          <Route path={`${process.env.PUBLIC_URL + "/blog-details/:id"}`} component={BlogDetails} />
-          <Route path={`${process.env.PUBLIC_URL + "/contact"}`} component={Contact} />
+         {/* <Route path={`${process.env.PUBLIC_URL + "/blog-details/:id"}`} component={BlogDetails} /> */}
+          {/* Fallback route for incorrect URLs */}
+          <Redirect to={`${process.env.PUBLIC_URL}/`} />
         </Switch>
       </NavScrollTop>
     </Router>

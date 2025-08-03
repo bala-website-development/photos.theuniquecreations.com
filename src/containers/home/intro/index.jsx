@@ -13,7 +13,7 @@ const IntroContainer = () => {
     speed: 750,
     spaceBetween: 0,
     slidesPerView: 1,
-    pagination: { clickable: true },
+    pagination: { clickable: false },
     autoplay: {
       delay: 32500,
       disableOnInteraction: false,
