@@ -11,6 +11,7 @@ import ad300 from "../images/rentals/ad300.jpg";
 import ad200 from "../images/rentals/ad200.jpg";
 import lightstand from "../images/rentals/lightstand.jpg";
 import oncameraflash from "../images/rentals/oncameraflash.jpg";
+import combo from "../images/rentals/combo.jpg";
 
 const rentalItems = [
   {
@@ -25,13 +26,18 @@ const rentalItems = [
   },
   {
     title: "Canon On-Camera Flash",
-    price: "$10/day",
+    price: "$15/day",
     thumbnail: oncameraflash,
   },
   {
     title: "Light Stand",
-    price: "$5/day",
+    price: "$10/day",
     thumbnail: lightstand,
+  },
+  {
+    title: "Combo 2X AD300 Pro Flash & Light Stand",
+    price: "$35/day",
+    thumbnail: combo,
   },
 ];
 
