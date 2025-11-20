@@ -179,10 +179,33 @@ const ContactForm = () => {
     setMessage("");
   };
   const password = (e) => {
-    if (e === "pappu") setAuthorise(true);
-    else setAuthorise(false);
+    if (e === "pappu") {
+      setAuthorise(true);
+      const session = {
+        value: btoa("pappu"), // Simple encoding
+        expiry: new Date().getTime() + 7 * 24 * 60 * 60 * 1000, // 7 days
+      };
+      localStorage.setItem("admin_session", JSON.stringify(session));
+    } else {
+      setAuthorise(false);
+    }
   };
+
   useEffect(() => {
+    const checkSession = () => {
+      const sessionStr = localStorage.getItem("admin_session");
+      if (sessionStr) {
+        const session = JSON.parse(sessionStr);
+        if (new Date().getTime() < session.expiry && atob(session.value) === "pappu") {
+          setAuthorise(true);
+        } else {
+          localStorage.removeItem("admin_session");
+          setAuthorise(false);
+        }
+      }
+    };
+    checkSession();
+
     const fetchData = async () => {
       //console.log("ssnbloginisdefetch");
       const value = "home";
