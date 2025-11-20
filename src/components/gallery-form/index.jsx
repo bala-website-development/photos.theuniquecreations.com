@@ -9,7 +9,6 @@ import axios from "axios";
 
 const ContactForm = () => {
   const [post, setPost] = useState([]);
-  const [authorise, setAuthorise] = useState(false);
   const [progress, setProgress] = useState("");
   const [message, setMessage] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
@@ -178,33 +177,9 @@ const ContactForm = () => {
     setFile(file);
     setMessage("");
   };
-  const password = (e) => {
-    if (e === "pappu") {
-      setAuthorise(true);
-      const session = {
-        value: btoa("pappu"), // Simple encoding
-        expiry: new Date().getTime() + 7 * 24 * 60 * 60 * 1000, // 7 days
-      };
-      localStorage.setItem("admin_session", JSON.stringify(session));
-    } else {
-      setAuthorise(false);
-    }
-  };
+
 
   useEffect(() => {
-    const checkSession = () => {
-      const sessionStr = localStorage.getItem("admin_session");
-      if (sessionStr) {
-        const session = JSON.parse(sessionStr);
-        if (new Date().getTime() < session.expiry && atob(session.value) === "pappu") {
-          setAuthorise(true);
-        } else {
-          localStorage.removeItem("admin_session");
-          setAuthorise(false);
-        }
-      }
-    };
-    checkSession();
 
     const fetchData = async () => {
       //console.log("ssnbloginisdefetch");
@@ -224,8 +199,7 @@ const ContactForm = () => {
   return (
     <Fragment>
       <>
-        <input className={!authorise ? "form-control" : "d-none"} type="password" onChange={(e) => password(e.target.value)} name="name" placeholder="password" required={true} />
-        <form className={authorise ? "contact-form-wrapper" : "d-none"} onSubmit={handleSubmit(onSubmit)}>
+        <form className="contact-form-wrapper" onSubmit={handleSubmit(onSubmit)}>
           {/* <form className="contact-form-wrapper"> */}
           <div className="row">
             <div className="col-md-4" data-aos="fade-up" data-aos-delay="300">

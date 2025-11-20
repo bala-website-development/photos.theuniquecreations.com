@@ -224,7 +224,7 @@ const UploadAlbum = ({ initialData, onSuccess }) => {
                                 value={formData.title}
                                 onChange={handleChange}
                                 required
-                                placeholder="e.g., Aashvi First Birthday 2025"
+                                placeholder="e.g., First Birthday 2025"
                             />
                         </Form.Group>
                     </Col>
@@ -237,7 +237,7 @@ const UploadAlbum = ({ initialData, onSuccess }) => {
                                 value={formData.slug}
                                 onChange={handleChange}
                                 required
-                                placeholder="e.g., aashvi-first-birthday-2025"
+                                placeholder="e.g., first-birthday-2025"
                             />
                         </Form.Group>
                     </Col>
