@@ -9,6 +9,7 @@ import Layout from "../layouts/index";
 import { Modal, Button, Form } from "react-bootstrap";
 import ad300 from "../images/rentals/ad300.jpg";
 import ad200 from "../images/rentals/ad200.jpg";
+import newervideolight from "../images/rentals/newervideolight.jpg";
 import lightstand from "../images/rentals/lightstand.jpg";
 import oncameraflash from "../images/rentals/oncameraflash.jpg";
 import combo from "../images/rentals/combo.jpg";
@@ -38,6 +39,11 @@ const rentalItems = [
     title: "Combo 2X AD300 Pro Flash & Light Stand",
     price: "$35/day",
     thumbnail: combo,
+  },
+  {
+    title: "NEEWER CB300B 320W LED Video Light with 2.4G/APP Remote Control",
+    price: "$50/day",
+    thumbnail: newervideolight,
   },
 ];
 
