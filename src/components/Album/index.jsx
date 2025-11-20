@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import config from "../../config.json";
 
+import { Helmet } from "react-helmet";
+
 const AlbumDetail = () => {
   const { slug } = useParams();
   const [album, setAlbum] = useState(null);
@@ -43,6 +45,15 @@ const AlbumDetail = () => {
     <div style={styles.pageContainer}>
       {album && (
         <>
+          <Helmet>
+            <title>{album.title} | SSN Digital Media</title>
+            <meta property="og:title" content={album.title} />
+            <meta property="og:description" content={album.description || `View the album: ${album.title}`} />
+            <meta property="og:image" content={album.thumbnail} />
+            <meta property="og:url" content={`https://${config.website}/album/${album.slug}`} />
+            <meta property="og:type" content="website" />
+          </Helmet>
+
           {/* Responsive Banner Section */}
           {album.showbanner && (
             <header style={styles.banner}>
