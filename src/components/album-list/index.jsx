@@ -8,6 +8,18 @@ const AlbumList = ({ onEdit }) => {
     const [albums, setAlbums] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
+    const [copiedId, setCopiedId] = useState(null);
+
+    const handleCopyUrl = (slug, albumId) => {
+        const url = `https://${config.website}/album/${slug}`;
+        navigator.clipboard.writeText(url).then(() => {
+            setCopiedId(albumId);
+            setTimeout(() => setCopiedId(null), 2000);
+        }).catch(err => {
+            console.error('Failed to copy URL:', err);
+            alert('Failed to copy URL');
+        });
+    };
 
     useEffect(() => {
         fetchAlbums();
@@ -67,14 +79,29 @@ const AlbumList = ({ onEdit }) => {
                             </td>
                             <td>{album.slug}</td>
                             <td>
-                                <a
-                                    href={`https://${config.website}/album/${album.slug}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    style={{ fontSize: "0.9rem" }}
-                                >
-                                    View
-                                </a>
+                                <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
+                                    <a
+                                        href={`https://${config.website}/album/${album.slug}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{ fontSize: "0.9rem" }}
+                                    >
+                                        View
+                                    </a>
+                                    <Button
+                                        variant={copiedId === album.id ? "success" : "outline-secondary"}
+                                        size="sm"
+                                        onClick={() => handleCopyUrl(album.slug, album.id)}
+                                        title="Copy URL to clipboard"
+                                        style={{ padding: "2px 8px", fontSize: "0.8rem" }}
+                                    >
+                                        {copiedId === album.id ? (
+                                            <>✓ Copied!</>
+                                        ) : (
+                                            <>Copy</>
+                                        )}
+                                    </Button>
+                                </div>
                             </td>
                             <td>{album.createddate}</td>
                             <td>
