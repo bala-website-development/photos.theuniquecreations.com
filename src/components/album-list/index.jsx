@@ -42,6 +42,7 @@ const AlbumList = ({ onEdit }) => {
                     <tr>
                         <th>Thumbnail</th>
                         <th>Title</th>
+                        <th>Description</th>
                         <th>Slug</th>
                         <th>Share URL</th>
                         <th>Created Date</th>
@@ -61,6 +62,9 @@ const AlbumList = ({ onEdit }) => {
                                 )}
                             </td>
                             <td>{album.title}</td>
+                            <td style={{ maxWidth: "200px", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+                                {album.description || "-"}
+                            </td>
                             <td>{album.slug}</td>
                             <td>
                                 <a
@@ -82,7 +86,7 @@ const AlbumList = ({ onEdit }) => {
                     ))}
                     {albums.length === 0 && (
                         <tr>
-                            <td colSpan="6" className="text-center">No albums found.</td>
+                            <td colSpan="7" className="text-center">No albums found.</td>
                         </tr>
                     )}
                 </tbody>
