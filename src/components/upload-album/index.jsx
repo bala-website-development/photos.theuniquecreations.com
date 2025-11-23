@@ -149,10 +149,12 @@ const UploadAlbum = ({ initialData, onSuccess }) => {
             }
 
             const currentYear = new Date().getFullYear();
+            const currentDate = getDate();
+
             const finalData = {
-                id: `${formData.slug}-${currentYear}`,
-                createdby: "ssndigitalmedia",
-                createddate: getDate(),
+                id: initialData?.id || `${formData.slug}-${currentYear}`,
+                createdby: initialData?.createdby || "ssndigitalmedia",
+                createddate: initialData?.createddate || currentDate,
                 description: formData.description,
                 downloadbtnlink1: formData.downloadbtnlink1,
                 downloadbtnlink2: formData.downloadbtnlink2,
@@ -168,6 +170,11 @@ const UploadAlbum = ({ initialData, onSuccess }) => {
                 viewlinkname1: formData.viewlinkname1,
                 viewlinkname2: formData.viewlinkname2
             };
+
+            // Add updateddate only when editing an existing album
+            if (initialData) {
+                finalData.updateddate = currentDate;
+            }
 
             console.log("Submitting album data:", finalData);
 

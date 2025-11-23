@@ -58,6 +58,7 @@ const AlbumList = ({ onEdit }) => {
                         <th>Slug</th>
                         <th>Share URL</th>
                         <th>Created Date</th>
+                        <th>Updated Date</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -104,6 +105,7 @@ const AlbumList = ({ onEdit }) => {
                                 </div>
                             </td>
                             <td>{album.createddate}</td>
+                            <td>{album.updateddate || "-"}</td>
                             <td>
                                 <Button variant="info" size="sm" onClick={() => onEdit(album)}>
                                     Edit
@@ -113,7 +115,7 @@ const AlbumList = ({ onEdit }) => {
                     ))}
                     {albums.length === 0 && (
                         <tr>
-                            <td colSpan="7" className="text-center">No albums found.</td>
+                            <td colSpan="8" className="text-center">No albums found.</td>
                         </tr>
                     )}
                 </tbody>
