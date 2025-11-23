@@ -9,6 +9,7 @@ const UploadAlbum = ({ initialData, onSuccess }) => {
         title: "",
         slug: "",
         thumbnail: "",
+        description: "",
         downloadbtnlink1: "",
         downloadbtnname1: "",
         downloadbtnlink2: "",
@@ -34,6 +35,7 @@ const UploadAlbum = ({ initialData, onSuccess }) => {
                 title: initialData.title || "",
                 slug: initialData.slug || "",
                 thumbnail: initialData.thumbnail || "",
+                description: initialData.description || "",
                 downloadbtnlink1: initialData.downloadbtnlink1 || "",
                 downloadbtnname1: initialData.downloadbtnname1 || "",
                 downloadbtnlink2: initialData.downloadbtnlink2 || "",
@@ -151,6 +153,7 @@ const UploadAlbum = ({ initialData, onSuccess }) => {
                 id: `${formData.slug}-${currentYear}`,
                 createdby: "ssndigitalmedia",
                 createddate: getDate(),
+                description: formData.description,
                 downloadbtnlink1: formData.downloadbtnlink1,
                 downloadbtnlink2: formData.downloadbtnlink2,
                 downloadbtnname1: formData.downloadbtnname1,
@@ -182,6 +185,7 @@ const UploadAlbum = ({ initialData, onSuccess }) => {
                             title: "",
                             slug: "",
                             thumbnail: "",
+                            description: "",
                             downloadbtnlink1: "",
                             downloadbtnname1: "",
                             downloadbtnlink2: "",
@@ -238,6 +242,22 @@ const UploadAlbum = ({ initialData, onSuccess }) => {
                                 onChange={handleChange}
                                 required
                                 placeholder="e.g., first-birthday-2025"
+                            />
+                        </Form.Group>
+                    </Col>
+                </Row>
+
+                <Row>
+                    <Col md={12}>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Description (Optional)</Form.Label>
+                            <Form.Control
+                                as="textarea"
+                                rows={3}
+                                name="description"
+                                value={formData.description}
+                                onChange={handleChange}
+                                placeholder="Enter a brief description of the album"
                             />
                         </Form.Group>
                     </Col>
@@ -333,7 +353,7 @@ const UploadAlbum = ({ initialData, onSuccess }) => {
                 </Row>
 
                 <Button variant="warning" type="submit" disabled={submitting} className="mt-3">
-                    {submitting ? "Uploading..." : "Upload Album"}
+                    {submitting ? (initialData ? "Updating..." : "Uploading...") : (initialData ? "Update Album" : "Upload Album")}
                 </Button>
             </Form>
         </div>
