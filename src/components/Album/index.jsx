@@ -19,7 +19,13 @@ const AlbumDetail = () => {
     try {
       const response = await axios.get(`${config.aws_service_url}/items/slug/${slug}`);
       if (response.data && response.data.length > 0) {
-        setAlbum(response.data[0]); // Assuming first match
+        const albumData = response.data[0];
+        // Only show active albums on public page
+        if (albumData.isactive === 1) {
+          setAlbum(albumData);
+        } else {
+          setError("Album not found");
+        }
       } else {
         setError("Album not found");
       }
@@ -27,6 +33,20 @@ const AlbumDetail = () => {
       setError("Failed to fetch album details");
     }
     setLoading(false);
+  };
+
+  const calculateDaysRemaining = (createdDate) => {
+    if (!createdDate) return 0;
+
+    const created = new Date(createdDate);
+    const today = new Date();
+    const expiryDate = new Date(created);
+    expiryDate.setDate(created.getDate() + 90);
+
+    const timeDiff = expiryDate - today;
+    const daysRemaining = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+
+    return daysRemaining > 0 ? daysRemaining : 0;
   };
 
   if (loading) {
@@ -38,7 +58,19 @@ const AlbumDetail = () => {
   }
 
   if (error) {
-    return <p style={styles.errorText}>{error}</p>;
+    return (
+      <div style={styles.pageContainer}>
+        <div style={styles.errorContainer}>
+          <h2 style={styles.errorTitle}>Album Not Available</h2>
+          <p style={styles.errorMessage}>
+            The album you're looking for is not available or has been removed.
+          </p>
+          <a href="/" style={styles.homeLink}>
+            ← Back to Home
+          </a>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -121,6 +153,11 @@ const AlbumDetail = () => {
                   </a>
                 </div>
               )}
+              <div style={styles.daysRemaining}>
+                <small style={{ color: calculateDaysRemaining(album.createddate) <= 10 ? "#dc3545" : "#666" }}>
+                  {calculateDaysRemaining(album.createddate)} days remaining to expire
+                </small>
+              </div>
             </section>
           </div>
 
@@ -130,6 +167,7 @@ const AlbumDetail = () => {
               <a href="/" className="text-secondary" style={styles.footerLink}>
                 <span>SSN Digital Media - Photography</span>
               </a>
+
             </div>
           </footer>
         </>
@@ -220,14 +258,42 @@ const styles = {
     color: "#007bff",
     margin: "0 0.5rem",
   },
+  daysRemaining: {
+    marginTop: "0.5rem",
+    fontSize: "0.9rem",
+  },
   loadingText: {
     fontSize: "1.5rem",
     marginTop: "3rem",
   },
-  errorText: {
-    fontSize: "1.5rem",
-    color: "red",
-    marginTop: "3rem",
+  errorContainer: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    minHeight: "60vh",
+    padding: "2rem",
+    textAlign: "center",
+  },
+  errorTitle: {
+    fontSize: "2rem",
+    color: "#dc3545",
+    marginBottom: "1rem",
+  },
+  errorMessage: {
+    fontSize: "1.1rem",
+    color: "#666",
+    marginBottom: "2rem",
+    maxWidth: "500px",
+  },
+  homeLink: {
+    fontSize: "1rem",
+    color: "#c69203ff",
+    textDecoration: "none",
+    padding: "0.5rem 1.5rem",
+    border: "1px solid #c69203ff",
+    borderRadius: "5px",
+    transition: "all 0.3s ease",
   },
 };
 
