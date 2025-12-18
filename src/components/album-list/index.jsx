@@ -11,7 +11,7 @@ const AlbumList = ({ onEdit }) => {
     const [copiedId, setCopiedId] = useState(null);
 
     const handleCopyUrl = (slug, albumId) => {
-        const url = `https://${config.website}/album/${slug}`;
+        const url = `https://${config.album}/album/${slug}`;
         navigator.clipboard.writeText(url).then(() => {
             setCopiedId(albumId);
             setTimeout(() => setCopiedId(null), 2000);
@@ -100,7 +100,7 @@ const AlbumList = ({ onEdit }) => {
                             </td>
                             <td>
                                 <a
-                                    href={`https://${config.website}/album/${album.slug}`}
+                                    href={`https://${config.album}/album/${album.slug}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     style={{ color: "#b37905", textDecoration: "none", fontWeight: "500" }}
