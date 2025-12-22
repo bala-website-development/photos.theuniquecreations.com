@@ -5,3 +5,4 @@ Allow: /contact
 Allow: /video-gallery
 Allow: /rentals
 Sitemap: https://www.ssndigitalmedia.com/sitemap.txt
+LLMs-txt: https://www.ssndigitalmedia.com/llms.txt
