@@ -10,4 +10,4 @@ Allow: /llms.txt
 Allow: /llms-full.txt
 
 Sitemap: https://www.ssndigitalmedia.com/sitemap.txt
-LLMs-txt: https://www.ssndigitalmedia.com/llms.txt
+Sitemap: https://www.ssndigitalmedia.com/llms.txt
