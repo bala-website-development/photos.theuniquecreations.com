@@ -1,8 +1,13 @@
 User-agent: *
+Disallow: /admin
+
 Allow: /about
 Allow: /
 Allow: /contact
 Allow: /video-gallery
 Allow: /rentals
+Allow: /llms.txt
+Allow: /llms-full.txt
+
 Sitemap: https://www.ssndigitalmedia.com/sitemap.txt
 LLMs-txt: https://www.ssndigitalmedia.com/llms.txt
